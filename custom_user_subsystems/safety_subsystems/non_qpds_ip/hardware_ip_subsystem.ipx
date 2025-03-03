@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<library>
+<index file="hardware_ip/hardware_ip_hw.tcl"/>
+</library>

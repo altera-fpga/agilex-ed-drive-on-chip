@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<entity name='motor_kit_sim_20MHz_MotorModel_Voltage_scale_120_1' floating-point-script-prefix='motor_kit_sim_20MHz_MotorModel_Voltage_scale_120_1_fpc'>
+  <clock name='sys' port='clk' reset='areset' reset-type='high' />
+</entity>
