@@ -1,0 +1,34 @@
+header:
+  version: 17
+repos:
+  meta-intel-fpga:
+    url: "https://git.yoctoproject.org/meta-intel-fpga"
+    path: layers/meta-intel-fpga
+    commit: 9714ae1ef8f22302bac60b7d2081bbdf3199ca70
+local_conf_header:
+  meta-fpga-embedded-machines: |
+    PREFERRED_PROVIDER_virtual/kernel ?= "linux-socfpga-lts"
+    PREFERRED_VERSION_linux-socfpga-lts ?= "6.6%"
+    PREFERRED_PROVIDER_virtual/bootloader ?= "u-boot-socfpga"
+    PREFERRED_VERSION_u-boot-socfpga ?= "v2024.04%"
+    IMAGE_TYPE ?= "mmc"
+    IMAGE_BOOT_ARGS = "earlycon panic=-1 uio_pdrv_genirq.of_id=generic-uio"
+    IMAGE_BOOT_ARGS:append:agilex5_modular = " console=ttyS0,115200 init=/sbin/init"
+    FDT_COMPATIBLE_MACHINE = "(agilex5_modular|agilex5_dk_a5e013bb32aesi0|agilex5_dk_a5e065bb32aes1|agilex5_mucv|agilex5_mudv_cvr|agilex7_dk_si_agf014ea|agilex7_dk_si_agf014eb|agilex7_dk_si_agi027fb|agilex7_dk_si_agi027fa|agilex7_dk_dev_agf027f1es|agilex7_dk_dev_agm039fes)"
+    FDT_NAME:agilex5_modular = "socfpga_agilex5_socdk"
+    FDT_NAME:agilex5_dk_a5e065bb32aes1 = "socfpga_agilex5_socdk"
+    FDT_NAME:agilex7_dk_si_agf014ea = "socfpga_agilex_socdk"
+    KERNEL_ADDR:agilex7_dk_si_agf014ea = "${@ '0x2400000' if d.getVar('FPGA_BST_SRC_URI') else '0x2000000'}"
+    KERNEL_ADDR:agilex5_dk_a5e065bb32aes1 = "0x82000000"
+    KERNEL_ADDR:agilex5_modular = "0x82000000"
+    FDT_ADDR:agilex7_dk_si_agf014ea = "0x6000000"
+    FDT_ADDR:agilex5_dk_a5e065bb32aes1 = "0x86000000"
+    FDT_ADDR:agilex5_modular = "0x86000000"
+    IMAGE_BOOT_FILES = "\
+        ${UBOOT_BINARY} \
+        Image \
+        ${@ 'top.core.rbf' if d.getVar('FPGA_BST_SRC_URI') else ''} \
+        boot.scr.uimg"
+    IMAGE_BOOT_FILES:append:agilex5_modular = "${@ ' devicetree/socfpga_agilex5_socdk.dtb;socfpga_agilex5_socdk.dtb' if d.getVar('FDT_SRC_URI') else ' socfpga_agilex5_socdk.dtb'}"
+    IMAGE_BOOT_FILES:append:agilex5_dk_a5e065bb32aes1 = "${@ ' devicetree/socfpga_agilex5_socdk.dtb;socfpga_agilex5_socdk.dtb' if d.getVar('FDT_SRC_URI') else ' socfpga_agilex5_socdk.dtb'}"
+    IMAGE_BOOT_FILES:append:agilex7_dk_si_agf014ea = "${@ ' devicetree/socfpga_agilex_socdk.dtb;socfpga_agilex_socdk.dtb' if d.getVar('FDT_SRC_URI') else ' socfpga_agilex_socdk.dtb'}"

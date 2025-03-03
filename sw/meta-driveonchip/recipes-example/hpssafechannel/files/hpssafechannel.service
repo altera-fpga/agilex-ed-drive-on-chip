@@ -1,0 +1,15 @@
+[Unit]
+Description=HPS Safety Channel Application
+
+[Service]
+Type=simple
+ExecStartPre=/bin/sleep 30
+ExecStart=/usr/bin/start.sh
+StandardOutput=tty
+TimeoutStartSec=55s
+ExecStop=reset & /bin/kill -9 $(pidof hpssafechannel)
+KillSignal=SIGINT
+StandardInput=ttyS0
+
+[Install]
+WantedBy=multi-user.target

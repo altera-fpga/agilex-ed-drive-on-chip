@@ -1,0 +1,8 @@
+# This is the QIP file for DSP Builder for Intel FPGAs system 'motor_kit_sim_20MHz_MotorModel_MM_16fixed'
+
+set_global_assignment -name VHDL_FILE ./../../dsp_builder_gen/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_safe_path.vhd
+set_global_assignment -name VHDL_FILE ./../../dsp_builder_gen/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_MM_16fixed.vhd
+set_global_assignment -name HEX_FILE ./../../dsp_builder_gen/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_MM_16fixed_sinPiAT_uid507_motor_kit_sim_20MHz_Mot0000fixed_Trig1_x_lutmem.hex
+set_global_assignment -name HEX_FILE ./../../dsp_builder_gen/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_MM_16fixed_cosPiAT_uid510_motor_kit_sim_20MHz_Mot0000fixed_Trig1_x_lutmem.hex
+set_global_assignment -name HEX_FILE ./../../dsp_builder_gen/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_MM_16fixed_sinPiAT_uid570_motor_kit_sim_20MHz_Mot0000fixed_Trig2_x_lutmem.hex
+set_global_assignment -name HEX_FILE ./../../dsp_builder_gen/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_MM_16fixed_cosPiAT_uid573_motor_kit_sim_20MHz_Mot0000fixed_Trig2_x_lutmem.hex

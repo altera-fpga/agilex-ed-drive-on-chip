@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<library>
+  <index file="motor_model_conduit_split/motor_model_conduit_split_hw.tcl"/>
+</library>
