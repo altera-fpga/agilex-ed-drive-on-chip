@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<entity name='DF_fixp16_alu_av_FOC_FL_fixp16_PI_Ctrl_D_DSPBA1' floating-point-script-prefix='DF_fixp16_alu_av_FOC_FL_fixp16_PI_Ctrl_D_DSPBA1_fpc'>
+  <clock name='sys' port='clk' reset='areset' reset-type='high' />
+</entity>

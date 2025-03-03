@@ -1,0 +1,25 @@
+header:
+  version: 17
+repos:
+  meta-intel-fpga:
+    url: "https://git.yoctoproject.org/meta-intel-fpga"
+    path: layers/meta-intel-fpga
+    commit: fc0a384d04ea62e7453d8f9f9496045ebef9e00f
+local_conf_header:
+  meta-fpga-embedded-machines: |
+    PREFERRED_PROVIDER_virtual/kernel ?= "linux-socfpga-lts"
+    PREFERRED_VERSION_linux-socfpga-lts ?= "6.6%"
+    PREFERRED_PROVIDER_virtual/bootloader ?= "u-boot-socfpga"
+    PREFERRED_VERSION_u-boot-socfpga ?= "v2024.01%"
+    IMAGE_TYPE ?= "mmc"
+    IMAGE_BOOT_ARGS = "earlycon panic=-1 uio_pdrv_genirq.of_id=generic-uio"
+    IMAGE_BOOT_ARGS:append:agilex5_modular = " console=ttyS0,115200 init=/sbin/init"
+    FDT_NAME:agilex5_modular = "socfpga_agilex5_socdk"
+    FDT_NAME:agilex7_dk_si_agf014ea = "socfpga_agilex_socdk"
+    IMAGE_BOOT_FILES = "\
+        ${UBOOT_BINARY} \
+        Image \
+        ${@ 'top.core.rbf' if d.getVar('FPGA_BST_SRC_URI') else ''} \
+        boot.scr.uimg"
+    IMAGE_BOOT_FILES:append:agilex5_modular = "${@ ' devicetree/socfpga_agilex5_socdk.dtb;socfpga_agilex5_socdk.dtb' if d.getVar('FDT_SRC_URI') else ' socfpga_agilex5_socdk.dtb'}"
+    IMAGE_BOOT_FILES:append:agilex7_dk_si_agf014ea = "${@ ' devicetree/socfpga_agilex_socdk.dtb;socfpga_agilex_socdk.dtb' if d.getVar('FDT_SRC_URI') else ' socfpga_agilex_socdk.dtb'}"
