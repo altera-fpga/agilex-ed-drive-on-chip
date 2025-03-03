@@ -1,0 +1,147 @@
+===========================================================
+Running DSP Builder, Build Model Script
+Date/Time        : 07-Aug-2024 11:01:56
+Model Name       : motor_kit_sim_20MHz
+Model Directory  : /nfs/iir/disks/sse_work_mevalver/PLC_MINIMAL_2/non_qpds_ip/dsp_builder_models/motor_kit_sim_20MHz
+Device Family    : Agilex 5
+Output Directory : ./../../dsp_builder_gen
+===========================================================
+
+ 
+Running setup_motor_kit_sim_20MHz.m:
+ 
+===========================================================
+DSP Builder 16-bit fixed point model of 
+Permanent Magnet Synchronous Motor (PMSM)
+===========================================================
+===========================================================
+Generating Bus Stimulus (.stm) file
+===========================================================
+ 
+Running setup_motor_kit_sim_20MHz.m:
+ 
+===========================================================
+DSP Builder 16-bit fixed point model of 
+Permanent Magnet Synchronous Motor (PMSM)
+===========================================================
+===========================================================
+Generating Bus Stimulus (.stm) file
+===========================================================
+[Warning: 'Input Port 4' of 'motor_kit_sim_20MHz/MotorModel' is not connected.] 
+[> In dsp_builder_build_model (line 18)] 
+[Warning: 'Input Port 5' of 'motor_kit_sim_20MHz/MotorModel' is not connected.] 
+[> In dsp_builder_build_model (line 18)] 
+[Warning: 'Input Port 6' of 'motor_kit_sim_20MHz/MotorModel' is not connected.] 
+[> In dsp_builder_build_model (line 18)] 
+[Warning: 'Output Port 10' of 'motor_kit_sim_20MHz/MotorModel' is not connected.] 
+[> In dsp_builder_build_model (line 18)] 
+[Warning: Parameter precision loss occurred for 'Gain' of
+'motor_kit_sim_20MHz/Output Filtering and Scaling/Gain3'. The parameter's value
+cannot be represented exactly using the run-time data type. A small
+quantization error has occurred. To disable this warning or error, in the
+Configuration Parameters > Diagnostics > Data Validity pane, set the 'Detect
+precision loss' option in the Parameters group to 'none'.
+Suggested Actions:
+    •  - Suppress
+] 
+[> In dsp_builder_build_model (line 18)] 
+[Warning: MATLAB display not active] 
+[> In dsp_builder_build_model (line 18)] 
+[Warning: 'motor_kit_sim_20MHz' is already compiled] 
+[> In getBlocksAndParametersForModelIP
+In dsp_builder_build_model (line 18)] 
+[Warning: Termination of 'motor_kit_sim_20MHz' deferred] 
+[> In getBlocksAndParametersForModelIP
+In dsp_builder_build_model (line 18)] 
+[Warning: Design contains an obsolete block [Signal]. Suggestion: Obsolete
+blocks should be removed.] 
+[> In dsp_builder_build_model (line 18)] 
+The value of the Reset-Minimization Global Enable is True.
+The value of the Floating-Point Reset-Minimization is True.
+The value of the Minimum Reset Pulse Width is 1024.
+[Warning: Constant block
+'motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse/Const1' with the value 1 has
+saturated due to insufficient bit-width (16 bits available, 17 bits required).
+Suggestion: Increase the bit-width or disable this warning in the block
+parameters.] 
+[> In dsp_builder_build_model (line 18)] 
+[Warning: Constant block
+'motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse/Const3' with the value 1 has
+saturated due to insufficient bit-width (16 bits available, 17 bits required).
+Suggestion: Increase the bit-width or disable this warning in the block
+parameters.] 
+[> In dsp_builder_build_model (line 18)] 
+[Warning: Constant block
+'motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse1/Const1' with the value 1 has
+saturated due to insufficient bit-width (16 bits available, 17 bits required).
+Suggestion: Increase the bit-width or disable this warning in the block
+parameters.] 
+[> In dsp_builder_build_model (line 18)] 
+[Warning: Constant block
+'motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse1/Const3' with the value 1 has
+saturated due to insufficient bit-width (16 bits available, 17 bits required).
+Suggestion: Increase the bit-width or disable this warning in the block
+parameters.] 
+[> In dsp_builder_build_model (line 18)] 
+[Warning: Constant block
+'motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse2/Const1' with the value 1 has
+saturated due to insufficient bit-width (16 bits available, 17 bits required).
+Suggestion: Increase the bit-width or disable this warning in the block
+parameters.] 
+[> In dsp_builder_build_model (line 18)] 
+[Warning: Constant block
+'motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse2/Const3' with the value 1 has
+saturated due to insufficient bit-width (16 bits available, 17 bits required).
+Suggestion: Increase the bit-width or disable this warning in the block
+parameters.] 
+[> In dsp_builder_build_model (line 18)] 
+[Warning: Constant block
+'motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse3/Const1' with the value 1 has
+saturated due to insufficient bit-width (16 bits available, 17 bits required).
+Suggestion: Increase the bit-width or disable this warning in the block
+parameters.] 
+[> In dsp_builder_build_model (line 18)] 
+[Warning: Constant block
+'motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse3/Const3' with the value 1 has
+saturated due to insufficient bit-width (16 bits available, 17 bits required).
+Suggestion: Increase the bit-width or disable this warning in the block
+parameters.] 
+[> In dsp_builder_build_model (line 18)] 
+[Warning: Constant block
+'motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse4/Const1' with the value 1 has
+saturated due to insufficient bit-width (16 bits available, 17 bits required).
+Suggestion: Increase the bit-width or disable this warning in the block
+parameters.] 
+[> In dsp_builder_build_model (line 18)] 
+[Warning: Constant block
+'motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse4/Const3' with the value 1 has
+saturated due to insufficient bit-width (16 bits available, 17 bits required).
+Suggestion: Increase the bit-width or disable this warning in the block
+parameters.] 
+[> In dsp_builder_build_model (line 18)] 
+[Warning: Constant block
+'motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse5/Const1' with the value 1 has
+saturated due to insufficient bit-width (16 bits available, 17 bits required).
+Suggestion: Increase the bit-width or disable this warning in the block
+parameters.] 
+[> In dsp_builder_build_model (line 18)] 
+[Warning: Constant block
+'motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse5/Const3' with the value 1 has
+saturated due to insufficient bit-width (16 bits available, 17 bits required).
+Suggestion: Increase the bit-width or disable this warning in the block
+parameters.] 
+[> In dsp_builder_build_model (line 18)] 
+[Warning: Constant block
+'motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse6/Const1' with the value 1 has
+saturated due to insufficient bit-width (16 bits available, 17 bits required).
+Suggestion: Increase the bit-width or disable this warning in the block
+parameters.] 
+[> In dsp_builder_build_model (line 18)] 
+[Warning: Constant block
+'motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse6/Const3' with the value 1 has
+saturated due to insufficient bit-width (16 bits available, 17 bits required).
+Suggestion: Increase the bit-width or disable this warning in the block
+parameters.] 
+[> In dsp_builder_build_model (line 18)] 
+[Warning: MATLAB display not active] 
+[> In dsp_builder_build_model (line 18)] 

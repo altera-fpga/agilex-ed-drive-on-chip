@@ -1,0 +1,16 @@
+<?xml version='1.0'?>
+<island simulinkPath='motor_kit_sim_20MHz/MotorModel/Current_scale_64_2' topLevelEntity='motor_kit_sim_20MHz_MotorModel_Current_scale_64_2'>
+    <port name='clk' dir='in' role='clock'/>
+    <port name='areset' dir='in' clock='clk' role='resetHigh'/>
+    <port name='in_1_Current_range_int16_tpl' clock='clk' reset='areset' width='16' dir='in' role='data' qsys_role='data_in_1_Current_range_int16_tpl' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Current_scale_64_2_GPIn.stm' highLevelName='Current_range_int16' highLevelIndex='1' vector='0' complex='0'/>
+    <port name='in_2_Current_sfix16_En10_tpl' clock='clk' reset='areset' width='16' dir='in' role='data' qsys_role='data_in_2_Current_sfix16_En10_tpl' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Current_scale_64_2_GPIn1.stm' highLevelName='Current_sfix16_En10' highLevelIndex='2' vector='0' complex='0'/>
+    <port name='out_1_Fraction_ND_ufix16_En16_x_tpl' clock='clk' reset='areset' width='16' dir='out' role='data' qsys_role='data_out_1_Fraction_ND_ufix16_En16_x_tpl' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Current_scale_64_2_GPOut.stm' highLevelName='Fraction_ND_ufix16_En16
+' highLevelIndex='1' vector='0' complex='0'/>
+    <file path='eda/sim_lib/altera_mf_components.vhd' base='quartus' type='vhdl' usage='simOnly' lib='altera_mf'/>
+    <file path='eda/sim_lib/altera_mf.vhd' base='quartus' type='vhdl' usage='simOnly' lib='altera_mf'/>
+    <file path='eda/sim_lib/altera_lnsim_components.vhd' base='quartus' type='vhdl' usage='simOnly' lib='altera_lnsim'/>
+    <file path='eda/sim_lib/altera_lnsim.sv' base='quartus' type='vhdl' usage='simOnly' lib='altera_lnsim'/>
+    <file path='eda/sim_lib/tennm_atoms.vhd' base='quartus' type='vhdl' usage='simOnly' lib='tennm'/>
+    <file path='eda/sim_lib/tennm_components.vhd' base='quartus' type='vhdl' usage='simOnly' lib='tennm'/>
+    <file path='eda/sim_lib/mentor/tennm_atoms_ncrypt.sv' base='quartus' type='vhdl' usage='simOnly' lib='tennm'/>
+</island>

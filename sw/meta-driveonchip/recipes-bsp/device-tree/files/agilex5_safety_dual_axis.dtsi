@@ -1,0 +1,55 @@
+/*
+* Add this piece of dtsi fragment in the file socfpga_agilex5_socdk.dts
+* Compile it in the kernel along with socfpga_agilex5.dtsi
+* LW bridge starts on 0x2000_0000
+* Full bridge starts on 0x4000_0000
+*/
+
+/{
+	soc@0 {
+		interval_timer0: interval_timer0@40000020 {
+			compatible = "generic-uio";
+			reg = <0x40000020 0x20>;
+			reg-names = "interval_timer0";
+			interrupt-parent = <&intc>;
+			interrupts = <0 17 4>;
+		};
+
+		doc_qep0: doc_qep0@20100500 {
+			compatible = "generic-uio";
+			reg = <0x20100500 0x40>;
+			reg-names = "doc_qep0";
+		};
+
+		shared_mem0: shared_mem0@40000080 {
+			compatible = "generic-uio";
+			reg = <0x40000080 0x1000>;
+			reg-names = "shared_mem0";
+		};
+
+		hps_fpga_gpio0: hps_fpga_gpio0@40200000 {
+			compatible = "generic-uio";
+			reg = <0x40200000 0x10>;
+			reg-names = "hps_fpga_gpio0";
+		};
+
+		doc_safety_dump0: doc_safety_dump0@20081000 {
+			compatible = "generic-uio";
+			reg = <0x20081000 0x1000>;
+			reg-names = "doc_safety_dump0";
+		};
+
+		doc_debug_ram0: doc_debug_ram0@20080000 {
+			compatible = "generic-uio";
+			reg = <0x20080000 0x1000>;
+			reg-names = "doc_debug_ram0";
+		};
+
+		fpga_speed_estimator0: fpga_speed_estimator0@40000000 {
+			compatible = "generic-uio";
+			reg = <0x40000000 0x1000>;
+			reg-names = "fpga_speed_estimator0";
+		};
+        	
+	};
+};

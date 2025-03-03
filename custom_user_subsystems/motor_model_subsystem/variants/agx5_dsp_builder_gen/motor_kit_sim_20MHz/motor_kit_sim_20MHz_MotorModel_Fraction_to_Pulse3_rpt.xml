@@ -1,0 +1,15 @@
+<?xml version='1.0'?>
+<island simulinkPath='motor_kit_sim_20MHz/MotorModel/Fraction_to_Pulse3' topLevelEntity='motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse3'>
+    <port name='clk' dir='in' role='clock'/>
+    <port name='areset' dir='in' clock='clk' role='resetHigh'/>
+    <port name='in_1_Fraction_ND_ufix16_En16_tpl' clock='clk' reset='areset' width='16' dir='in' role='data' qsys_role='data_in_1_Fraction_ND_ufix16_En16_tpl' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse3_GPIn.stm' highLevelName='Fraction_ND_ufix16_En16' highLevelIndex='1' vector='0' complex='0'/>
+    <port name='out_1_PulseDensity_Bool_x_tpl' clock='clk' reset='areset' width='1' dir='out' role='data' qsys_role='data_out_1_PulseDensity_Bool_x_tpl' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse3_GPOut.stm' highLevelName='PulseDensity_Bool
+' highLevelIndex='1' vector='0' complex='0'/>
+    <file path='eda/sim_lib/altera_mf_components.vhd' base='quartus' type='vhdl' usage='simOnly' lib='altera_mf'/>
+    <file path='eda/sim_lib/altera_mf.vhd' base='quartus' type='vhdl' usage='simOnly' lib='altera_mf'/>
+    <file path='eda/sim_lib/altera_lnsim_components.vhd' base='quartus' type='vhdl' usage='simOnly' lib='altera_lnsim'/>
+    <file path='eda/sim_lib/altera_lnsim.sv' base='quartus' type='vhdl' usage='simOnly' lib='altera_lnsim'/>
+    <file path='eda/sim_lib/tennm_atoms.vhd' base='quartus' type='vhdl' usage='simOnly' lib='tennm'/>
+    <file path='eda/sim_lib/tennm_components.vhd' base='quartus' type='vhdl' usage='simOnly' lib='tennm'/>
+    <file path='eda/sim_lib/mentor/tennm_atoms_ncrypt.sv' base='quartus' type='vhdl' usage='simOnly' lib='tennm'/>
+</island>
