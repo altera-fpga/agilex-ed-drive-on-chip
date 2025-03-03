@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<library>
+<index file="ssg_emb_dsm/ssg_emb_dsm_hw.tcl"/>
+<index file="ssg_emb_pwm/ecfs_conduit_splitter_hw.tcl"/>
+<index file="ssg_emb_pwm/ssg_emb_pwm_hw.tcl"/>
+<index file="ssg_emb_sd_adc/ssg_emb_sd_adc_hw.tcl"/>
+</library>
