@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<library>
+<index file="motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_hw.tcl" />
+</library>

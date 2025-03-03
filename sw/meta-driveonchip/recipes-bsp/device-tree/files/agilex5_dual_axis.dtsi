@@ -1,0 +1,13 @@
+/*
+* Drive-on-Chip device tree fragment for Agilex 5
+*/
+
+/{
+	soc@0 {
+		doc0: doc0@40080000 {
+			compatible = "generic-uio";
+			reg = <0x40080000 0x108>,<0x40080108 0x108>;
+			reg-names = "axis0","axis1";
+		};
+	};
+};

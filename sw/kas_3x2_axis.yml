@@ -1,0 +1,21 @@
+header:
+  version: 17
+  includes:
+    - repo: meta-fpga-embedded
+      file: kas-fpga-embedded-core.yml
+    - repo: meta-fpga-embedded
+      file: kas/dev.yml
+    - repo: meta-fpga-embedded
+      file: kas/docker.yml
+repos:
+  meta-driveonchip:
+    path: meta-driveonchip
+  meta-fpga-embedded:
+    path: meta-fpga-embedded
+local_conf_header:
+  meta-driveonchip: |
+    PREFERRED_PROVIDER_virtual/kernel = "linux-socfpga-rt"
+    FPGA_BST_SRC_URI:agilex7_dk_si_agf014ea = "file://agilex7_dk_si_agf014ea_3x2_axis.core.rbf"
+    FDT_SRC_URI:agilex7_dk_si_agf014ea = "file://agilex7_3x2_axis.dtsi"
+    FPGA_BST_SRC_URI:agilex5_modular = "file://agilex5_modular_3x2_axis.core.rbf"
+    FDT_SRC_URI:agilex5_modular = "file://agilex5_3x2_axis.dtsi"
