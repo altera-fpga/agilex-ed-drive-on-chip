@@ -1,0 +1,28 @@
+/*
+* Add this piece of dtsi fragment in the file socfpga_agilex7_socdk.dts
+* and socfpga_stratix10_socdk.dts. Compile it in the kernel along with
+* socfpga_agilex.dtsi and socfpga_stratix10.dtsi.
+*/
+
+/{
+	soc {
+		doc0: doc0@80080000 {
+			compatible = "generic-uio";
+			reg = <0x80080000 0x108>,<0x80080108 0x108>;
+			reg-names = "axis0","axis1";
+		};
+
+		doc1: doc1@80280000 {
+			compatible = "generic-uio";
+			reg = <0x80280000 0x108>,<0x80280108 0x108>;
+			reg-names = "axis0","axis1";
+		};
+
+		doc2: doc2@80380000 {
+			compatible = "generic-uio";
+			reg = <0x80380000 0x108>,<0x80380108 0x108>;
+			reg-names = "axis0","axis1";
+		};
+
+	};
+};

@@ -1,0 +1,39 @@
+<?xml version='1.0'?>
+<island simulinkPath='DF_fixp16_alu_av/FOC' topLevelEntity='DF_fixp16_alu_av_FOC'>
+    <port name='clk' dir='in' role='clock'/>
+    <port name='areset' dir='in' clock='clk' role='resetHigh'/>
+    <port name='h_areset' dir='in' clock='clk' role='resetHigh'/>
+    <port name='busIn_writedata' clock='clk' reset='h_areset' width='32' dir='in' role='busData' qsys_role='writedata' stm=''/>
+    <port name='busIn_address' clock='clk' reset='h_areset' width='6' dir='in' role='busAddress' qsys_role='address' stm=''/>
+    <port name='busIn_write' clock='clk' reset='h_areset' width='1' dir='in' role='busWriteEnable' qsys_role='write' stm=''/>
+    <port name='busIn_read' clock='clk' reset='h_areset' width='1' dir='in' role='busReadEnable' qsys_role='read' stm=''/>
+    <port name='busOut_readdatavalid' clock='clk' reset='h_areset' width='1' dir='out' role='busDataValid' qsys_role='readdatavalid' stm=''/>
+    <port name='busOut_readdata' clock='clk' reset='h_areset' width='32' dir='out' role='busData' qsys_role='readdata' stm=''/>
+    <port name='busOut_waitrequest' clock='clk' reset='h_areset' width='1' dir='out' role='busWaitRequest' qsys_role='waitrequest' stm=''/>
+    <port name='Iu' clock='clk' reset='areset' width='16' dir='in' role='data' qsys_role='data_Iu' stm='DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_FL_fixp16_ChannelIn2.stm' highLevelName='Iu' highLevelIndex='0' vector='0' complex='0'/>
+    <port name='Iw' clock='clk' reset='areset' width='16' dir='in' role='data' qsys_role='data_Iw' stm='DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_FL_fixp16_ChannelIn2.stm' highLevelName='Iw' highLevelIndex='1' vector='0' complex='0'/>
+    <port name='vu_pwm' clock='clk' reset='areset' width='16' dir='out' role='data' qsys_role='data_vu_pwm' stm='DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_FL_fixp16_ChannelOut1_vunroll_x.stm' highLevelName='vu_pwm' highLevelIndex='0' vector='0' complex='0'/>
+    <port name='vv_pwm' clock='clk' reset='areset' width='16' dir='out' role='data' qsys_role='data_vv_pwm' stm='DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_FL_fixp16_ChannelOut1_vunroll_x.stm' highLevelName='vv_pwm' highLevelIndex='1' vector='0' complex='0'/>
+    <port name='vw_pwm' clock='clk' reset='areset' width='16' dir='out' role='data' qsys_role='data_vw_pwm' stm='DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_FL_fixp16_ChannelOut1_vunroll_x.stm' highLevelName='vw_pwm' highLevelIndex='2' vector='0' complex='0'/>
+    <file path='eda/sim_lib/altera_mf_components.vhd' base='quartus' type='vhdl' usage='simOnly' lib='altera_mf'/>
+    <file path='eda/sim_lib/altera_mf.vhd' base='quartus' type='vhdl' usage='simOnly' lib='altera_mf'/>
+    <file path='eda/sim_lib/altera_lnsim_components.vhd' base='quartus' type='vhdl' usage='simOnly' lib='altera_lnsim'/>
+    <file path='eda/sim_lib/altera_lnsim.sv' base='quartus' type='vhdl' usage='simOnly' lib='altera_lnsim'/>
+    <file path='eda/sim_lib/tennm_atoms.vhd' base='quartus' type='vhdl' usage='simOnly' lib='tennm'/>
+    <file path='eda/sim_lib/tennm_components.vhd' base='quartus' type='vhdl' usage='simOnly' lib='tennm'/>
+    <file path='eda/sim_lib/mentor/tennm_atoms_ncrypt.sv' base='quartus' type='vhdl' usage='simOnly' lib='tennm'/>
+    <file path='DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_safe_path_msim.vhd' base='rtl' type='vhdl' usage='simOnly'/>
+    <file path='DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_safe_path.vhd' base='rtl' type='vhdl' usage='synthOnly'/>
+    <file path='DF_fixp16_alu_av/DF_fixp16_alu_av_FOC.vhd' base='rtl' type='vhdl' usage='all'/>
+    <file path='backend/Libraries/vhdl/base/dspba_library_package.vhd' base='dspba' type='vhdl' usage='all'/>
+    <file path='backend/Libraries/vhdl/base/dspba_library.vhd' base='dspba' type='vhdl' usage='all'/>
+    <file path='DF_fixp16_alu_av/busFabric_DF_fixp16_alu_av_FOC_217ipvmsy06j62696x6g656u0qu5xgbvsfqz.vhd' base='rtl' type='vhdl' usage='all'/>
+    <file path='DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_fb_latches.vhd' base='rtl' type='vhdl' usage='all'/>
+    <file path='DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_Avalon_Regs.vhd' base='rtl' type='vhdl' usage='all'/>
+    <file path='DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_FL_fixp16.vhd' base='rtl' type='vhdl' usage='all'/>
+    <file path='DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_FL_fixp16_sinPiAT_uid292_Trig_lutmem.hex' base='rtl' type='data' usage='all'/>
+    <file path='DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_FL_fixp16_cosPiAT_uid295_Trig_lutmem.hex' base='rtl' type='data' usage='all'/>
+    <file path='DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_FL_fixp16_sinPiAT_uid339_Trig2_lutmem.hex' base='rtl' type='data' usage='all'/>
+    <file path='DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_FL_fixp16_cosPiAT_uid342_Trig2_lutmem.hex' base='rtl' type='data' usage='all'/>
+
+</island>
