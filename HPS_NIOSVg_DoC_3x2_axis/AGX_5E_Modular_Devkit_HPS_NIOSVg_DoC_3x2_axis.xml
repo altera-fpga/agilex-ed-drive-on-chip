@@ -1,0 +1,208 @@
+<!--
+###################################################################################
+# Copyright (C) 2025 Intel Corporation
+#
+# This software and the related documents are Intel copyrighted materials, and
+# your use of them is governed by the express license under which they were
+# provided to you ("License"). Unless the License provides otherwise, you may
+# not use, modify, copy, publish, distribute, disclose or transmit this software
+# or the related documents without Intel's prior written permission.
+#
+# This software and the related documents are provided as is, with no express
+# or implied warranties, other than those that are expressly stated in the License.
+###################################################################################
+-->
+
+<PROJECT name="top">
+  <DEVKIT>AGX_5E_Modular_Devkit</DEVKIT>
+  <FAMILY>Agilex 5</FAMILY>
+  <DEVICE>A5ED065BB32AE6SR0</DEVICE>
+  <VERSION>24.3</VERSION>
+  <SUBSYSTEM type="clock" name="clock_subsystem">
+    <DISABLE_DEFAULT_BOARD_CLKRST_EXPORT_TAG>1</DISABLE_DEFAULT_BOARD_CLKRST_EXPORT_TAG>
+    <NUM_GEN_CLOCKS>4</NUM_GEN_CLOCKS>
+    <GEN_CLK0_NAME>clk_0</GEN_CLK0_NAME>
+    <GEN_CLK0_FREQ>300.0</GEN_CLK0_FREQ>
+    <GEN_CLK1_NAME>clk_1</GEN_CLK1_NAME>
+    <GEN_CLK1_FREQ>180.0</GEN_CLK1_FREQ>
+    <GEN_CLK2_NAME>clk_2</GEN_CLK2_NAME>
+    <GEN_CLK2_FREQ>20.0</GEN_CLK2_FREQ>
+    <GEN_CLK3_NAME>clk_3</GEN_CLK3_NAME>
+    <GEN_CLK3_FREQ>100.0</GEN_CLK3_FREQ>
+  </SUBSYSTEM>
+  <SUBSYSTEM type="board" name="board_subsystem">
+  </SUBSYSTEM>
+  <SUBSYSTEM type="hps" name="hps_subsystem">
+    <AVMM_HOST>
+      <NAME>hps_subsystem</NAME>
+    </AVMM_HOST>
+    <H2F_EXPORT>FULL</H2F_EXPORT>
+  </SUBSYSTEM>
+  <SUBSYSTEM type="cpu" name="dniosv_subsystem">
+    <CPU_SUBSYSTEM_TYPE>dniosvg</CPU_SUBSYSTEM_TYPE>
+    <APPLICATION_DIR>../custom_user_subsystems/drive_subsystems/software/niosv/common/.</APPLICATION_DIR>
+    <APPLICATION_DIR>../custom_user_subsystems/drive_subsystems/software/niosv/dual_axis/demo_cfg.h</APPLICATION_DIR>
+    <APPLICATION_DIR>../custom_user_subsystems/drive_subsystems/software/niosv/3x2-axis/cpu0/system_shim.h</APPLICATION_DIR>
+    <APPLICATION_DIR>../custom_user_subsystems/drive_subsystems/software/niosv/3x2-axis/common/.</APPLICATION_DIR>
+    <BSP_SETTINGS_FILE>../custom_user_subsystems/drive_subsystems/software/niosv/3x2-axis/cpu0/settings.bsp</BSP_SETTINGS_FILE>
+    <CUSTOM_CMAKEFILE>1</CUSTOM_CMAKEFILE>
+    <BSP_TYPE>ucosii</BSP_TYPE>
+    <AVMM_HOST>
+      <NAME>dniosv_subsystem</NAME>
+    </AVMM_HOST>
+    <UART_IRQ_PRIORITY>1</UART_IRQ_PRIORITY>
+    <TIMER0_IRQ_PRIORITY>2</TIMER0_IRQ_PRIORITY>
+    <TIMER1_IRQ_PRIORITY>3</TIMER1_IRQ_PRIORITY>
+    <CPU2RAM_AXI_BRIDGE>1</CPU2RAM_AXI_BRIDGE>
+  </SUBSYSTEM>
+  <SUBSYSTEM type="user" name="motor_model_subsystem_0" script="../custom_user_subsystems/motor_model_subsystem/motor_model_create.tcl">
+    <DRIVE_NUMBER>0</DRIVE_NUMBER>
+    <AVMM_HOST>
+      <NAME>dniosv_subsystem</NAME>
+    </AVMM_HOST>
+  </SUBSYSTEM>
+  <SUBSYSTEM type="user" name="motor_model_subsystem_1" script="../custom_user_subsystems/motor_model_subsystem/motor_model_create.tcl">
+    <DRIVE_NUMBER>1</DRIVE_NUMBER>
+    <AVMM_HOST>
+      <NAME>dniosv_subsystem</NAME>
+    </AVMM_HOST>
+  </SUBSYSTEM>
+  <SUBSYSTEM type="user" name="drive_subsystem_0" script="../custom_user_subsystems/drive_subsystems/subsystems/drive_create.tcl">
+    <DRIVE_NUMBER>0</DRIVE_NUMBER>
+    <AVMM_HOST>
+      <NAME>dniosv_subsystem</NAME>
+    </AVMM_HOST>
+    <ADC_IRQ_PRIORITY>0</ADC_IRQ_PRIORITY>
+    <ADC_IRQ_HOST>dniosv_subsystem</ADC_IRQ_HOST>
+  </SUBSYSTEM>
+  <SUBSYSTEM type="user" name="drive_subsystem_1" script="../custom_user_subsystems/drive_subsystems/subsystems/drive_create.tcl">
+    <DRIVE_NUMBER>1</DRIVE_NUMBER>
+    <AVMM_HOST>
+      <NAME>dniosv_subsystem</NAME>
+    </AVMM_HOST>
+  </SUBSYSTEM>
+  <SUBSYSTEM type="user" name="control_subsystem" script="../custom_user_subsystems/drive_subsystems/subsystems/control_create.tcl">
+    <DUAL_PORT_ENABLE>1</DUAL_PORT_ENABLE>
+    <DISABLE_SVM_DUMP>1</DISABLE_SVM_DUMP>
+    <DISABLE_SAFETY_DUMP>1</DISABLE_SAFETY_DUMP>
+    <AVMM_HOST>
+      <NAME>dniosv_subsystem</NAME>
+    </AVMM_HOST>
+    <AVMM_HOST_1>
+      <NAME>hps_subsystem</NAME>
+    </AVMM_HOST_1>
+  </SUBSYSTEM>
+
+  <SUBSYSTEM type="cpu" name="dniosv_subsystem1">
+    <CPU_SUBSYSTEM_TYPE>dniosvg</CPU_SUBSYSTEM_TYPE>
+    <APPLICATION_DIR>../custom_user_subsystems/drive_subsystems/software/niosv/common/.</APPLICATION_DIR>
+    <APPLICATION_DIR>../custom_user_subsystems/drive_subsystems/software/niosv/dual_axis/demo_cfg.h</APPLICATION_DIR>
+    <APPLICATION_DIR>../custom_user_subsystems/drive_subsystems/software/niosv/3x2-axis/cpu1/system_shim.h</APPLICATION_DIR>
+	<APPLICATION_DIR>../custom_user_subsystems/drive_subsystems/software/niosv/3x2-axis/common/.</APPLICATION_DIR>
+    <BSP_SETTINGS_FILE>../custom_user_subsystems/drive_subsystems/software/niosv/3x2-axis/cpu1/settings.bsp</BSP_SETTINGS_FILE>
+    <CUSTOM_CMAKEFILE>1</CUSTOM_CMAKEFILE>
+    <BSP_TYPE>ucosii</BSP_TYPE>
+    <AVMM_HOST>
+      <NAME>dniosv_subsystem1</NAME>
+    </AVMM_HOST>
+    <UART_IRQ_PRIORITY>1</UART_IRQ_PRIORITY>
+    <TIMER0_IRQ_PRIORITY>2</TIMER0_IRQ_PRIORITY>
+    <TIMER1_IRQ_PRIORITY>3</TIMER1_IRQ_PRIORITY>
+    <CPU2RAM_AXI_BRIDGE>1</CPU2RAM_AXI_BRIDGE>
+  </SUBSYSTEM>
+  <SUBSYSTEM type="user" name="motor_model_subsystem_2" script="../custom_user_subsystems/motor_model_subsystem/motor_model_create.tcl">
+    <DRIVE_NUMBER>2</DRIVE_NUMBER>
+    <AVMM_HOST>
+      <NAME>dniosv_subsystem1</NAME>
+    </AVMM_HOST>
+  </SUBSYSTEM>
+  <SUBSYSTEM type="user" name="motor_model_subsystem_3" script="../custom_user_subsystems/motor_model_subsystem/motor_model_create.tcl">
+    <DRIVE_NUMBER>3</DRIVE_NUMBER>
+    <AVMM_HOST>
+      <NAME>dniosv_subsystem1</NAME>
+    </AVMM_HOST>
+  </SUBSYSTEM>
+  <SUBSYSTEM type="user" name="drive_subsystem_2" script="../custom_user_subsystems/drive_subsystems/subsystems/drive_create.tcl">
+    <DRIVE_NUMBER>2</DRIVE_NUMBER>
+    <AVMM_HOST>
+      <NAME>dniosv_subsystem1</NAME>
+    </AVMM_HOST>
+    <ADC_IRQ_PRIORITY>0</ADC_IRQ_PRIORITY>
+    <ADC_IRQ_HOST>dniosv_subsystem1</ADC_IRQ_HOST>
+  </SUBSYSTEM>
+  <SUBSYSTEM type="user" name="drive_subsystem_3" script="../custom_user_subsystems/drive_subsystems/subsystems/drive_create.tcl">
+    <DRIVE_NUMBER>3</DRIVE_NUMBER>
+    <AVMM_HOST>
+      <NAME>dniosv_subsystem1</NAME>
+    </AVMM_HOST>
+  </SUBSYSTEM>
+  <SUBSYSTEM type="user" name="control_subsystem1" script="../custom_user_subsystems/drive_subsystems/subsystems/control_create.tcl">
+    <DUAL_PORT_ENABLE>1</DUAL_PORT_ENABLE>
+    <DISABLE_SVM_DUMP>1</DISABLE_SVM_DUMP>
+    <DISABLE_SAFETY_DUMP>1</DISABLE_SAFETY_DUMP>
+    <AVMM_HOST>
+      <NAME>dniosv_subsystem1</NAME>
+    </AVMM_HOST>
+    <AVMM_HOST_1>
+      <NAME>hps_subsystem</NAME>
+    </AVMM_HOST_1>
+  </SUBSYSTEM>
+
+  <SUBSYSTEM type="cpu" name="dniosv_subsystem2">
+    <CPU_SUBSYSTEM_TYPE>dniosvg</CPU_SUBSYSTEM_TYPE>
+    <APPLICATION_DIR>../custom_user_subsystems/drive_subsystems/software/niosv/common/.</APPLICATION_DIR>
+    <APPLICATION_DIR>../custom_user_subsystems/drive_subsystems/software/niosv/dual_axis/demo_cfg.h</APPLICATION_DIR>
+    <APPLICATION_DIR>../custom_user_subsystems/drive_subsystems/software/niosv/3x2-axis/cpu2/system_shim.h</APPLICATION_DIR>
+	<APPLICATION_DIR>../custom_user_subsystems/drive_subsystems/software/niosv/3x2-axis/common/.</APPLICATION_DIR>
+    <BSP_SETTINGS_FILE>../custom_user_subsystems/drive_subsystems/software/niosv/3x2-axis/cpu2/settings.bsp</BSP_SETTINGS_FILE>
+    <CUSTOM_CMAKEFILE>1</CUSTOM_CMAKEFILE>
+    <BSP_TYPE>ucosii</BSP_TYPE>
+    <AVMM_HOST>
+      <NAME>dniosv_subsystem2</NAME>
+    </AVMM_HOST>
+    <UART_IRQ_PRIORITY>1</UART_IRQ_PRIORITY>
+    <TIMER0_IRQ_PRIORITY>2</TIMER0_IRQ_PRIORITY>
+    <TIMER1_IRQ_PRIORITY>3</TIMER1_IRQ_PRIORITY>
+    <CPU2RAM_AXI_BRIDGE>1</CPU2RAM_AXI_BRIDGE>
+  </SUBSYSTEM>
+  <SUBSYSTEM type="user" name="motor_model_subsystem_4" script="../custom_user_subsystems/motor_model_subsystem/motor_model_create.tcl">
+    <DRIVE_NUMBER>4</DRIVE_NUMBER>
+    <AVMM_HOST>
+      <NAME>dniosv_subsystem2</NAME>
+    </AVMM_HOST>
+  </SUBSYSTEM>
+  <SUBSYSTEM type="user" name="motor_model_subsystem_5" script="../custom_user_subsystems/motor_model_subsystem/motor_model_create.tcl">
+    <DRIVE_NUMBER>5</DRIVE_NUMBER>
+    <AVMM_HOST>
+      <NAME>dniosv_subsystem2</NAME>
+    </AVMM_HOST>
+  </SUBSYSTEM>
+  <SUBSYSTEM type="user" name="drive_subsystem_4" script="../custom_user_subsystems/drive_subsystems/subsystems/drive_create.tcl">
+    <DRIVE_NUMBER>4</DRIVE_NUMBER>
+    <AVMM_HOST>
+      <NAME>dniosv_subsystem2</NAME>
+    </AVMM_HOST>
+    <ADC_IRQ_PRIORITY>0</ADC_IRQ_PRIORITY>
+    <ADC_IRQ_HOST>dniosv_subsystem2</ADC_IRQ_HOST>
+  </SUBSYSTEM>
+  <SUBSYSTEM type="user" name="drive_subsystem_5" script="../custom_user_subsystems/drive_subsystems/subsystems/drive_create.tcl">
+    <DRIVE_NUMBER>5</DRIVE_NUMBER>
+    <AVMM_HOST>
+      <NAME>dniosv_subsystem2</NAME>
+    </AVMM_HOST>
+  </SUBSYSTEM>
+  <SUBSYSTEM type="user" name="control_subsystem2" script="../custom_user_subsystems/drive_subsystems/subsystems/control_create.tcl">
+    <DUAL_PORT_ENABLE>1</DUAL_PORT_ENABLE>
+    <DISABLE_SVM_DUMP>1</DISABLE_SVM_DUMP>
+    <DISABLE_SAFETY_DUMP>1</DISABLE_SAFETY_DUMP>
+    <AVMM_HOST>
+      <NAME>dniosv_subsystem2</NAME>
+    </AVMM_HOST>
+    <AVMM_HOST_1>
+      <NAME>hps_subsystem</NAME>
+    </AVMM_HOST_1>
+  </SUBSYSTEM>
+
+  <SUBSYSTEM type="user" name="dummy_subsystem" script="../custom_user_subsystems/drive_subsystems/subsystems/user_create.tcl">
+  </SUBSYSTEM>
+</PROJECT>
