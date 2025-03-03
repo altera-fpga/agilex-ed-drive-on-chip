@@ -1,0 +1,26 @@
+header:
+  version: 17
+  includes:
+    - repo: meta-fpga-embedded
+      file: kas-fpga-embedded-core.yml
+    - repo: meta-fpga-embedded
+      file: kas/dev.yml
+repos:
+  meta-driveonchip:
+    path: meta-driveonchip
+  meta-fpga-embedded:
+    path: meta-fpga-embedded
+local_conf_header:
+  meta-driveonchip: |
+    PREFERRED_PROVIDER_virtual/kernel = "linux-socfpga-rt"
+    IMAGE_INSTALL:append = " \
+        hpssafechannel \
+        kernel-module-gpio-altera \
+        htop \
+        util-linux \
+    "
+    IMAGE_BOOT_ARGS:append = " nohz_full=2,3 isolcpus=2,3"
+    FPGA_BST_SRC_URI:agilex5_modular = "file://agilex5_modular_safety_dual_axis.core.rbf"
+    FDT_SRC_URI:agilex5_modular = "file://agilex5_safety_dual_axis.dtsi"
+    FPGA_BST_SRC_URI:agilex7_dk_si_agf014ea = "file://agilex7_dk_si_agf014ea_safety_dual_axis.core.rbf"
+    FDT_SRC_URI:agilex7_dk_si_agf014ea = "file://agilex7_safety_dual_axis.dtsi"
