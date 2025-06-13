@@ -8,11 +8,11 @@ DEPENDS = "ncurses"
 RDEPENDS:${PN} += " bash "
 
 SRC_URI = "\
-        file://${BPN}_1.0.tar.gz;sha256sum=e5990e956e3a922180a34c6f6dbd99bc373738b6760b194acc527f074d3c952b \
-        file://hpssafechannel.service;sha256sum=838a3387598ee0bf19815ffa72917a773a83f272010ce556a409c2128b6e68d5 \
+        file://${BPN}_1.0.tar.gz;sha256sum=00235bf0fb7c19daf3c404f5de48e3945772e53d89420f3af2e8ca33921be4bf \
+        file://hpssafechannel.service;sha256sum=5a869a2e2769c30dee737c3dcdfb524d7b19d462d7ac2c564f18e639c6a53557 \
         file://start_agx7.sh;sha256sum=5490bc6dac71bc781f5a76137c3128f6be4a26d43a9c1bc4134b008aed10e658 \
         file://start_agx5.sh;sha256sum=d3b531fe07db089dd8f0f734162d4390605b9943b80c55df298fd22461bd88fe \
-        file://q;sha256sum=66d2cf16dab923a6de7492b0882ff642f92cbf9a8423d3fcd830bdb39bbf0c8eccb \
+        file://q;sha256sum=7a76c8033f870139179224f575103829acb719e62afbda65c9867a88357cb691 \
 "
 
 S = "${WORKDIR}"

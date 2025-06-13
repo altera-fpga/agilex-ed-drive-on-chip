@@ -1,11 +1,11 @@
 ###################################################################################
-# Copyright (C) 2025 Intel Corporation
+# Copyright (C) 2025 Altera Corporation
 #
-# This software and the related documents are Intel copyrighted materials, and
+# This software and the related documents are Altera copyrighted materials, and
 # your use of them is governed by the express license under which they were
 # provided to you ("License"). Unless the License provides otherwise, you may
 # not use, modify, copy, publish, distribute, disclose or transmit this software
-# or the related documents without Intel's prior written permission.
+# or the related documents without Altera's prior written permission.
 #
 # This software and the related documents are provided as is, with no express
 # or implied warranties, other than those that are expressly stated in the License.
@@ -142,6 +142,7 @@ proc create_safety_subsystem {} {
   set_instance_parameter_value axi_bridge READ_ISSUING_CAPABILITY               {16}
   set_instance_parameter_value axi_bridge S0_ID_WIDTH                           {8}
   set_instance_parameter_value axi_bridge SYNC_RESET                            {0}
+  set_instance_parameter_value axi_bridge BACKPRESSURE_DURING_RESET             {0}
   set_instance_parameter_value axi_bridge USE_M0_ARBURST                        {0}
   set_instance_parameter_value axi_bridge USE_M0_ARCACHE                        {0}
   set_instance_parameter_value axi_bridge USE_M0_ARID                           {0}
@@ -169,6 +170,12 @@ proc create_safety_subsystem {} {
   set_instance_parameter_value axi_bridge USE_M0_RUSER                          {0}
   set_instance_parameter_value axi_bridge USE_M0_WSTRB                          {1}
   set_instance_parameter_value axi_bridge USE_M0_WUSER                          {0}
+  set_instance_parameter_value axi_bridge USE_M0_ADDRCHK                        {0}
+  set_instance_parameter_value axi_bridge USE_M0_DATACHK                        {0}
+  set_instance_parameter_value axi_bridge USE_M0_SAI                            {0}
+  set_instance_parameter_value axi_bridge USE_M0_POISON                         {0}
+  set_instance_parameter_value axi_bridge USE_M0_USER_DATA                      {0}
+  
   set_instance_parameter_value axi_bridge USE_PIPELINE                          {1}
   set_instance_parameter_value axi_bridge USE_S0_ARCACHE                        {0}
   set_instance_parameter_value axi_bridge USE_S0_ARLOCK                         {0}
@@ -188,6 +195,11 @@ proc create_safety_subsystem {} {
   set_instance_parameter_value axi_bridge USE_S0_RUSER                          {0}
   set_instance_parameter_value axi_bridge USE_S0_WLAST                          {0}
   set_instance_parameter_value axi_bridge USE_S0_WUSER                          {0}
+  set_instance_parameter_value axi_bridge USE_S0_ADDRCHK                        {0}
+  set_instance_parameter_value axi_bridge USE_S0_DATACHK                        {0}
+  set_instance_parameter_value axi_bridge USE_S0_SAI                            {0}
+  set_instance_parameter_value axi_bridge USE_S0_POISON                         {0}
+  set_instance_parameter_value axi_bridge USE_S0_USER_DATA                      {0}
   set_instance_parameter_value axi_bridge WRITE_ACCEPTANCE_CAPABILITY           {16}
   set_instance_parameter_value axi_bridge WRITE_ADDR_USER_WIDTH                 {1}
   set_instance_parameter_value axi_bridge WRITE_DATA_USER_WIDTH                 {1}

@@ -1,14 +1,14 @@
 /* ##################################################################################
- * Copyright (C) 2025 Intel Corporation
+Â * Copyright (C) 2025 Altera Corporation
  *
- * This software and the related documents are Intel copyrighted materials, and
+Â * This software and the related documents are Altera copyrighted materials, and
  * your use of them is governed by the express license under which they were
  * provided to you ("License"). Unless the License provides otherwise, you may
  * not use, modify, copy, publish, distribute, disclose or transmit this software
- * or the related documents without Intel's prior written permission.
+ * or the related documents without Altera's prior written permission.
  *
- * This software and the related documents are provided as is, with no express
- * or implied warranties, other than those that are expressly stated in the License.
+Â * This software and the related documents are provided as is, with no express
+Â * or implied warranties, other than those that are expressly stated in the License.
 * ##################################################################################
 */
  
@@ -37,13 +37,13 @@ module debounce(
     parameter qual0 = 4'b0000, qual1 = 4'b1111;
 //----------------------------------------------------------------------------//
 
-    always @(posedge clk) begin
+  always @(posedge clk) begin
     QEP_meta <= QEPsignal;
     QEP_safe <= QEP_meta;
   end //always
     
     // Debounce Routine
-    always@(posedge clk or posedge reset)
+  always@(posedge clk or posedge reset)
     if (reset)
     begin
         QEPqualified <= 1'b0;

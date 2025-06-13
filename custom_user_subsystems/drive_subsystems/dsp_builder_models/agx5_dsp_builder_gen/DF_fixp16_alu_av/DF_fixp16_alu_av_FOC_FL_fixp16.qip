@@ -1,8 +1,0 @@
-# This is the QIP file for DSP Builder for Intel FPGAs system 'DF_fixp16_alu_av_FOC_FL_fixp16'
-
-set_global_assignment -name VHDL_FILE ./../../dsp_builder_gen/DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_safe_path.vhd
-set_global_assignment -name VHDL_FILE ./../../dsp_builder_gen/DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_FL_fixp16.vhd
-set_global_assignment -name HEX_FILE ./../../dsp_builder_gen/DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_FL_fixp16_sinPiAT_uid292_Trig_lutmem.hex
-set_global_assignment -name HEX_FILE ./../../dsp_builder_gen/DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_FL_fixp16_cosPiAT_uid295_Trig_lutmem.hex
-set_global_assignment -name HEX_FILE ./../../dsp_builder_gen/DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_FL_fixp16_sinPiAT_uid339_Trig2_lutmem.hex
-set_global_assignment -name HEX_FILE ./../../dsp_builder_gen/DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_FL_fixp16_cosPiAT_uid342_Trig2_lutmem.hex

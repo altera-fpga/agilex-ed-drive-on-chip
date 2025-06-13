@@ -1,5 +1,5 @@
 # Drive-on-Chip Yocto Linux
-Config and meta-layers for building a Linux image to run on supported Altera SoC FPGA Devkits.
+Config and Yocto layers for building a Linux image to run on supported Altera SoC FPGA Devkits.
 
 ## Supported Designs
  - `3x2_axis`
@@ -8,23 +8,14 @@ Config and meta-layers for building a Linux image to run on supported Altera SoC
 
 ## Supported Machines
 
- - `agilex5_modular`
- - `agilex7_dk_si_agf014ea`
-
+ - `agilex5_mk_a5e065bb32aes1`
 
 ## Supported Image Types
 
  - `mmc` (SD Card)
 
-
 ## Building An Image
- > **Make sure you have read the [Dependencies](meta-fpga-embedded/README.md#dependencies) section from the main documentation before proceeding.**
-
-A core bitstream (`.rbf`) file is required for a successful build and needs to be placed in `meta-driveonchip/recipes-bsp/fpga-bitstream/files`.
-
-You can find prebuilt core bitstream files in the assets for your chosen release or you can build your own. The expected naming convention is `${MACHINE}_${DESIGN}.core.rbf`. For example `agilex5_modular_safety_dual_axis.core.rbf`.
-
-Once you have the core bitstream (.rbf) file in the correct location run the following command to start a build:
+ > **Make sure you have installed the [required dependencies](meta-altera-fpga/README.md#dependencies) before proceeding.**
 
 ```bash
 KAS_MACHINE=${MACHINE} kas build kas_${DESIGN}.yml
@@ -32,9 +23,22 @@ KAS_MACHINE=${MACHINE} kas build kas_${DESIGN}.yml
 For example:
 
 ```bash
-KAS_MACHINE=agilex5_modular kas build kas-safety_dual_axis.yml
+KAS_MACHINE=agilex5_mk_a5e065bb32aes1 kas build kas-safety_dual_axis.yml
 ```
 
 See above for a list of supported `MACHINE` and `DESIGN` identifiers.
 
-Once the build has finished successfully you will have a `.wic` image available in `build/tmp/deploy/images/${MACHINE}` which can be flashed to an SD card.
+Once the build has finished successfully you will have a `.wic.gz` image available in `build/tmp/deploy/images/${MACHINE}` which can be [flashed to an SD card](meta-altera-fpga/docs/flash_sd_card.md).
+
+### Custom Core Bitstream
+
+If you have not checked out a release branch or you would like to use your own core bitstream (`.rbf`) it needs to be placed in `meta-driveonchip/recipes-bsp/fpga-bitstream/files`.
+
+You also need to add the following line to the design configuration file `kas_${DESIGN}.yml`
+
+```
+    FPGA_BST_SRC_URI = "file://top.core.rbf"
+```
+
+Remove other references to `FPGA_BST_SRC_URI` and `FPGA_BST_SHA256SUM`.
+

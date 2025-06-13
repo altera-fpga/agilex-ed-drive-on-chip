@@ -1,8 +1,0 @@
-# This is the QIP file for DSP Builder for Intel FPGAs system 'motor_kit_sim_20MHz_MotorModel_Current_scale_64_x'
-
-set_global_assignment -name VHDL_FILE ./../../dsp_builder_gen/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_safe_path.vhd
-set_global_assignment -name VHDL_FILE ./../../dsp_builder_gen/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Current_scale_64_x.vhd
-set_global_assignment -name HEX_FILE ./../../dsp_builder_gen/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Current_scale_64_x_memoryC0_uid83_invTabGen_lutmem.hex
-set_global_assignment -name HEX_FILE ./../../dsp_builder_gen/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Current_scale_64_x_memoryC1_uid86_invTabGen_lutmem.hex
-set_global_assignment -name HEX_FILE ./../../dsp_builder_gen/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Current_scale_64_x_memoryC2_uid89_invTabGen_lutmem.hex
-set_global_assignment -name HEX_FILE ./../../dsp_builder_gen/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Current_scale_64_x_memoryC3_uid92_invTabGen_lutmem.hex

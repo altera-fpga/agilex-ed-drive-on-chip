@@ -1,11 +1,11 @@
 /* ##################################################################################
- * Copyright (C) 2025 Intel Corporation
+ * Copyright (C) 2025 Altera Corporation
  *
- * This software and the related documents are Intel copyrighted materials, and
+ * This software and the related documents are Altera copyrighted materials, and
  * your use of them is governed by the express license under which they were
  * provided to you ("License"). Unless the License provides otherwise, you may
  * not use, modify, copy, publish, distribute, disclose or transmit this software
- * or the related documents without Intel's prior written permission.
+ * or the related documents without Altera's prior written permission.
  *
  * This software and the related documents are provided as is, with no express
  * or implied warranties, other than those that are expressly stated in the License.
@@ -109,7 +109,7 @@ void adc_sd_read(drive_params *dp, system_params *sp)
     // range 0 to 1 (ufix16_En16). 2^16/1024 = 64;  2^15/1024 = 32.
     // This means -32A will be 0 and 32A will be 1.
     // Schematic page 12: +/-32A current measurement. Current is sensed across 0.01 resistor. I=V/R = V/0.01 = 100*V
-    // Motor phase currents Intel MAX10 ADC: 81.9 counts/A, convert this value to 16 bits, same as Sigma-Delta ADC:
+    // Motor phase currents Altera MAX10 ADC: 81.9 counts/A, convert this value to 16 bits, same as Sigma-Delta ADC:
     // MAX10 ADC read back value * 1024/81.9 = MAX10 ADC read back value * 12803/1024
 
     dp->sd_drive_adc.iu_measure = (short) IORD_16DIRECT(dp->DOC_ADC_BASE_ADDR, ADC_I_U);
@@ -138,7 +138,7 @@ void adc_sd_read(drive_params *dp, system_params *sp)
         // This means -60V will be 0 and 60V will be 1.
         // Schematic page 11: 60.16V -->0.32V full range resolution. Voltage is sensed across 100/18700 divider.
         // 0.32*(18700+100)/100 = 0.32*188 = 60.16V
-        // Motor phase voltages Intel MAX10 ADC: 67.7 counts/V
+        // Motor phase voltages Altera MAX10 ADC: 67.7 counts/V
 
         dp->sd_drive_adc.vu = (short) IORD_16DIRECT(dp->DOC_ADC_POW_BASE_ADDR, ADC_I_U);
         dp->sd_drive_adc.vv = (short) IORD_16DIRECT(dp->DOC_ADC_POW_BASE_ADDR, ADC_I_V);

@@ -1,11 +1,11 @@
 /* ##################################################################################
- * Copyright (C) 2025 Intel Corporation
+ * Copyright (C) 2025 Altera Corporation
  *
- * This software and the related documents are Intel copyrighted materials, and
+ * This software and the related documents are Altera copyrighted materials, and
  * your use of them is governed by the express license under which they were
  * provided to you ("License"). Unless the License provides otherwise, you may
  * not use, modify, copy, publish, distribute, disclose or transmit this software
- * or the related documents without Intel's prior written permission.
+ * or the related documents without Altera's prior written permission.
  *
  * This software and the related documents are provided as is, with no express
  * or implied warranties, other than those that are expressly stated in the License.
@@ -65,7 +65,7 @@
  */
 #define    SYSID_CIV_DE2115        0    //!< Cyclone IV On DE2-115 INK
 #define    SYSID_CVE               1    //!< Cyclone VE dev kit
-#define    SYSID_CVSX              2    //!< Cyclone V SX Intel dev kit
+#define    SYSID_CVSX              2    //!< Cyclone V SX Altera dev kit
 #define    SYSID_MAX10M50          3    //!< MAX 10M50 dev kit
 #define    SYSID_CVSX_SOCKIT       4    //!< Cyclone VSX SoCKit
 #define     SYSID_CVSX_XIP         5    //!< Cyclone VSX executing from QSPI (eXecute In Place)
@@ -84,7 +84,7 @@
  *
  * @{
  */
-#define    SYSID_PB_ALT12_MULTIAXIS     3       //!< Intel ALT12 multi axis power board
+#define SYSID_PB_ALT12_MULTIAXIS        3       //!< Intel ALT12 multi axis power board
 #define SYSID_PB_LOW_VOLTAGE            4       //!< Intel Tandem Motion Power board
 
 #define HSMC_PRSNTN_MASK                0x80

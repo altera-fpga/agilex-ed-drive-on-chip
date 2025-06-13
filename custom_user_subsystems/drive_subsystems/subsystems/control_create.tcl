@@ -1,11 +1,11 @@
 ###################################################################################
-# Copyright (C) 2025 Intel Corporation
+# Copyright (C) 2025 Altera Corporation
 #
-# This software and the related documents are Intel copyrighted materials, and
+# This software and the related documents are Altera copyrighted materials, and
 # your use of them is governed by the express license under which they were
 # provided to you ("License"). Unless the License provides otherwise, you may
 # not use, modify, copy, publish, distribute, disclose or transmit this software
-# or the related documents without Intel's prior written permission.
+# or the related documents without Altera's prior written permission.
 #
 # This software and the related documents are provided as is, with no express
 # or implied warranties, other than those that are expressly stated in the License.
@@ -19,6 +19,8 @@ set_shell_parameter AVMM_HOST_1                 {}
 set_shell_parameter RAM_WITH_AXI4_INTERFACE     {0}
 set_shell_parameter DISABLE_SVM_DUMP            {0}
 set_shell_parameter DISABLE_SAFETY_DUMP         {0}
+set_shell_parameter SVM_DUMP_SIZE_BYTES         {524288.0}
+set_shell_parameter DEBUG_RAM_SIZE_BYTES        {4096.0}
 
 # =====================================================================
 
@@ -58,6 +60,8 @@ proc create_drive_subsystem {} {
   set v_ram_with_axi4_interface [get_shell_parameter RAM_WITH_AXI4_INTERFACE]
   set v_disable_svm_dump        [get_shell_parameter DISABLE_SVM_DUMP]
   set v_disable_safety_dump     [get_shell_parameter DISABLE_SAFETY_DUMP]
+  set v_svm_dump_size_bytes     [get_shell_parameter SVM_DUMP_SIZE_BYTES]
+  set v_debug_ram_size_bytes    [get_shell_parameter DEBUG_RAM_SIZE_BYTES]
 
     # In case of 2 AXI interfaces, following is the readDuringWriteMode_Mixed setting,
     # #2 AXI4 Interfaces --> "S1 NEW_DATA; S2 OLD_DATA"
@@ -169,7 +173,7 @@ proc create_drive_subsystem {} {
     set_instance_parameter_value doc_svm_dump   lvl1OutputRegB                        {0}
     set_instance_parameter_value doc_svm_dump   lvl2OutputRegA                        {0}
     set_instance_parameter_value doc_svm_dump   lvl2OutputRegB                        {0}
-    set_instance_parameter_value doc_svm_dump   memorySize                            {524288.0}
+    set_instance_parameter_value doc_svm_dump   memorySize                            ${v_svm_dump_size_bytes}
     set_instance_parameter_value doc_svm_dump   poison_enable                         {0}
     set_instance_parameter_value doc_svm_dump   readDuringWriteMode_Mixed             ${v_mixed_mode_rd_during_wr_mode}
     set_instance_parameter_value doc_svm_dump   resetrequest_enabled                  {1}
@@ -204,7 +208,7 @@ proc create_drive_subsystem {} {
   set_instance_parameter_value doc_sys_console_debug_ram   lvl1OutputRegB                   {0}
   set_instance_parameter_value doc_sys_console_debug_ram   lvl2OutputRegA                   {0}
   set_instance_parameter_value doc_sys_console_debug_ram   lvl2OutputRegB                   {0}
-  set_instance_parameter_value doc_sys_console_debug_ram   memorySize                       {4096.0}
+  set_instance_parameter_value doc_sys_console_debug_ram   memorySize                       ${v_debug_ram_size_bytes}
   set_instance_parameter_value doc_sys_console_debug_ram   poison_enable                    {0}
   set_instance_parameter_value doc_sys_console_debug_ram   readDuringWriteMode_Mixed        ${v_mixed_mode_rd_during_wr_mode}
   set_instance_parameter_value doc_sys_console_debug_ram   resetrequest_enabled             {1}

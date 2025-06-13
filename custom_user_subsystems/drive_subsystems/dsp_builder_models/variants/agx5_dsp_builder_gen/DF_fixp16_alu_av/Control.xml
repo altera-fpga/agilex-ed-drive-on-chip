@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href="file:////nfs/iir/disks/swbld_archive_3/acdskit/25.1/129/linux64/quartus/dspba/Blocksets/BaseBlocks/modelip.xsl"?>
+<MODEL>
+<NAME>DF_fixp16_alu_av/Control</NAME>
+<BUILD_YEAR>2025</BUILD_YEAR>
+<DOCPATH>file:////nfs/iir/disks/swbld_archive_3/acdskit/25.1/129/linux64/quartus/dspba/Docs/Help/</DOCPATH>
+<DESCRIPTION>
+This help page relates to the specific instance 'Control' of the CONTROL block
+</DESCRIPTION>
+<HELP>file:////nfs/iir/disks/swbld_archive_3/acdskit/25.1/129/linux64/quartus/dspba/Docs/Help/CONTROL_help.html</HELP>
+<BLOCKTYPE>CONTROL</BLOCKTYPE>
+<MEMORYMAPS path="DF_fixp16_alu_av">
+  <REGS numregs="1" desc="Dummy - not used. Set to 0." origin="DF_fixp16_alu_av/FOC/Avalon Regs/Axis_In" clashes="false" rwmode="Read/Write" bitwidth="8" fracwidth="0" privatespace="false">
+    <REG numregparts="1" desc="Dummy - not used. Set to 0." clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="8" msb="7" lsb="0" addr="2"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="Axis value" origin="DF_fixp16_alu_av/FOC/Avalon Regs/Axis_Output" clashes="false" rwmode="Read" bitwidth="8" fracwidth="0" privatespace="false">
+    <REG numregparts="1" desc="Axis value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="8" msb="7" lsb="0" addr="60"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="Busy bit - When '1' not ready to accept new data" origin="DF_fixp16_alu_av/FOC/Avalon Regs/DSPBA_Busy" clashes="false" rwmode="Read" bitwidth="1" fracwidth="0" privatespace="false">
+    <REG numregparts="1" desc="Busy bit - When '1' not ready to accept new data" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="1" msb="0" lsb="0" addr="0"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="Ready bit - Output data is ready when 'Control' reg value matches 'Ready' " origin="DF_fixp16_alu_av/FOC/Avalon Regs/DSPBA_Ready" clashes="false" rwmode="Read" bitwidth="1" fracwidth="0" privatespace="false">
+    <REG numregparts="1" desc="Ready bit - Output data is ready when 'Control' reg value matches 'Ready' " clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="1" msb="0" lsb="0" addr="3"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="Start bit - toggle bit value once to start" origin="DF_fixp16_alu_av/FOC/Avalon Regs/DSPBA_Start" clashes="false" rwmode="Read/Write" bitwidth="1" fracwidth="0" privatespace="false">
+    <REG numregparts="1" desc="Start bit - toggle bit value once to start" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="1" msb="0" lsb="0" addr="1"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="I_Sat_Limit_cfg input value" origin="DF_fixp16_alu_av/FOC/Avalon Regs/I_Sat_Limit_cfg_CFG" clashes="false" rwmode="Read/Write" bitwidth="16" fracwidth="10" privatespace="false">
+    <REG numregparts="1" desc="I_Sat_Limit_cfg input value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="19"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="Id output value" origin="DF_fixp16_alu_av/FOC/Avalon Regs/Id_Output" clashes="false" rwmode="Read" bitwidth="16" fracwidth="10" privatespace="false">
+    <REG numregparts="1" desc="Id output value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="55"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="Iq output value" origin="DF_fixp16_alu_av/FOC/Avalon Regs/Iq_Output" clashes="false" rwmode="Read" bitwidth="16" fracwidth="10" privatespace="false">
+    <REG numregparts="1" desc="Iq output value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="54"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="Iu input value" origin="DF_fixp16_alu_av/FOC/Avalon Regs/Iu_Input" clashes="false" rwmode="Read/Write" bitwidth="16" fracwidth="10" privatespace="false">
+    <REG numregparts="1" desc="Iu input value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="32"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="Iw input value" origin="DF_fixp16_alu_av/FOC/Avalon Regs/Iw_Input" clashes="false" rwmode="Read/Write" bitwidth="16" fracwidth="10" privatespace="false">
+    <REG numregparts="1" desc="Iw input value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="33"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="Ki_cfg input value" origin="DF_fixp16_alu_av/FOC/Avalon Regs/Ki_cfg_CFG" clashes="false" rwmode="Read/Write" bitwidth="16" fracwidth="10" privatespace="false">
+    <REG numregparts="1" desc="Ki_cfg input value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="17"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="Kp_cfg input value" origin="DF_fixp16_alu_av/FOC/Avalon Regs/Kp_cfg_CFG" clashes="false" rwmode="Read/Write" bitwidth="16" fracwidth="10" privatespace="false">
+    <REG numregparts="1" desc="Kp_cfg input value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="16"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="Maximum Voltage" origin="DF_fixp16_alu_av/FOC/Avalon Regs/MaxPWMvalue" clashes="false" rwmode="Read/Write" bitwidth="16" fracwidth="0" privatespace="false">
+    <REG numregparts="1" desc="Maximum Voltage" clashes="false" double_init="18750.000000" sint_init="18750">
+      <REGPART part_init="18750" part_double_init="18750.000000" clashes="false" width="16" msb="15" lsb="0" addr="62"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="Torque input value" origin="DF_fixp16_alu_av/FOC/Avalon Regs/Torque_Input" clashes="false" rwmode="Read/Write" bitwidth="16" fracwidth="10" privatespace="false">
+    <REG numregparts="1" desc="Torque input value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="34"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="Valpha output value" origin="DF_fixp16_alu_av/FOC/Avalon Regs/Valpha_Output" clashes="false" rwmode="Read" bitwidth="32" fracwidth="10" privatespace="false">
+    <REG numregparts="1" desc="Valpha output value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="32" msb="31" lsb="0" addr="48"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="Vbeta output value" origin="DF_fixp16_alu_av/FOC/Avalon Regs/Vbeta_Output" clashes="false" rwmode="Read" bitwidth="32" fracwidth="10" privatespace="false">
+    <REG numregparts="1" desc="Vbeta output value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="32" msb="31" lsb="0" addr="49"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="Vu output value" origin="DF_fixp16_alu_av/FOC/Avalon Regs/Vu_Output" clashes="false" rwmode="Read" bitwidth="16" fracwidth="0" privatespace="false">
+    <REG numregparts="1" desc="Vu output value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="56"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="Vv output value" origin="DF_fixp16_alu_av/FOC/Avalon Regs/Vv_Output" clashes="false" rwmode="Read" bitwidth="16" fracwidth="0" privatespace="false">
+    <REG numregparts="1" desc="Vv output value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="57"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="Vw output value" origin="DF_fixp16_alu_av/FOC/Avalon Regs/Vw_Output" clashes="false" rwmode="Read" bitwidth="16" fracwidth="0" privatespace="false">
+    <REG numregparts="1" desc="Vw output value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="58"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="phi_el input value" origin="DF_fixp16_alu_av/FOC/Avalon Regs/phi_el_Input" clashes="false" rwmode="Read/Write" bitwidth="16" fracwidth="16" privatespace="false">
+    <REG numregparts="1" desc="phi_el input value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="35"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="reset - set to '1' to reset" origin="DF_fixp16_alu_av/FOC/Avalon Regs/reset_Input" clashes="false" rwmode="Read/Write" bitwidth="1" fracwidth="0" privatespace="false">
+    <REG numregparts="1" desc="reset - set to '1' to reset" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="1" msb="0" lsb="0" addr="36"/>
+    </REG>
+  </REGS>
+</MEMORYMAPS>
+<RESOURCES>
+<FUNIT>
+ <FUNAME>DF_fixp16_alu_av/FOC</FUNAME>
+ <FUTYPE>SYNTH</FUTYPE>
+ <LUT4>1052</LUT4>
+ <MULT>0</MULT>
+ <BITS>0</BITS>
+ <BLOCKS>0</BLOCKS>
+</FUNIT>
+<FUNIT>
+ <FUNAME>DF_fixp16_alu_av/FOC/Avalon Regs</FUNAME>
+ <FUTYPE>SYNTH</FUTYPE>
+ <LUT4>4</LUT4>
+ <MULT>0</MULT>
+ <BITS>0</BITS>
+ <BLOCKS>0</BLOCKS>
+</FUNIT>
+<FUNIT>
+ <FUNAME>DF_fixp16_alu_av/FOC/FL_fixp16</FUNAME>
+ <FUTYPE>SYNTH</FUTYPE>
+ <LUT4>3184</LUT4>
+ <MULT>16</MULT>
+ <BITS>13824</BITS>
+ <BLOCKS>4</BLOCKS>
+</FUNIT>
+<FUNIT>
+ <FUNAME>DF_fixp16_alu_av/FOC/fb_latches</FUNAME>
+ <FUTYPE>SYNTH</FUTYPE>
+ <LUT4>306</LUT4>
+ <MULT>0</MULT>
+ <BITS>0</BITS>
+ <BLOCKS>0</BLOCKS>
+</FUNIT>
+</RESOURCES>
+</MODEL>

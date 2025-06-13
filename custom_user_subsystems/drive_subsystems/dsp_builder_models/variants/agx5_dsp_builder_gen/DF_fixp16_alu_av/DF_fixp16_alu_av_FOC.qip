@@ -1,0 +1,8 @@
+# This is the QIP file for DSP Builder for Altera FPGAs system 'DF_fixp16_alu_av_FOC'
+
+set_global_assignment -name VHDL_FILE ./../../dsp_builder_gen/DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_safe_path.vhd
+set_global_assignment -name VHDL_FILE ./../../dsp_builder_gen/DF_fixp16_alu_av/DF_fixp16_alu_av_FOC.vhd
+set_global_assignment -name QIP_FILE ./../../dsp_builder_gen/DF_fixp16_alu_av/busFabric_DF_fixp16_alu_av_FOC_217ipvmsy06j62696x6g656u0qu5xgbvsfqz.qip
+set_global_assignment -name QIP_FILE ./../../dsp_builder_gen/DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_fb_latches.qip
+set_global_assignment -name QIP_FILE ./../../dsp_builder_gen/DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_Avalon_Regs.qip
+set_global_assignment -name QIP_FILE ./../../dsp_builder_gen/DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_FL_fixp16.qip

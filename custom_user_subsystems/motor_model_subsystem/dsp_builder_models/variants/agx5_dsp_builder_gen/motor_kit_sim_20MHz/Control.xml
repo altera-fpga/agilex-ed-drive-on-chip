@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href="file:////nfs/iir/disks/swbld_archive_3/acdskit/25.1/129/linux64/quartus/dspba/Blocksets/BaseBlocks/modelip.xsl"?>
+<MODEL>
+<NAME>motor_kit_sim_20MHz/Control</NAME>
+<BUILD_YEAR>2025</BUILD_YEAR>
+<DOCPATH>file:////nfs/iir/disks/swbld_archive_3/acdskit/25.1/129/linux64/quartus/dspba/Docs/Help/</DOCPATH>
+<DESCRIPTION>
+This help page relates to the specific instance 'Control' of the CONTROL block
+</DESCRIPTION>
+<HELP>file:////nfs/iir/disks/swbld_archive_3/acdskit/25.1/129/linux64/quartus/dspba/Docs/Help/CONTROL_help.html</HELP>
+<BLOCKTYPE>CONTROL</BLOCKTYPE>
+<MEMORYMAPS path="motor_kit_sim_20MHz">
+  <REGS numregs="1" desc="DC link input value" origin="motor_kit_sim_20MHz/MotorModel/AvalonRegisters/DC_link_V_Input" clashes="false" rwmode="Read/Write" bitwidth="16" fracwidth="6" privatespace="false">
+    <REG numregparts="1" desc="DC link input value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="37"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="DC link range input value" origin="motor_kit_sim_20MHz/MotorModel/AvalonRegisters/DC_link_range_CFG" clashes="false" rwmode="Read/Write" bitwidth="16" fracwidth="0" privatespace="false">
+    <REG numregparts="1" desc="DC link range input value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="38"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="Busy bit - When '1' not ready to accept new data" origin="motor_kit_sim_20MHz/MotorModel/AvalonRegisters/DSPBA_Busy" clashes="false" rwmode="Read" bitwidth="1" fracwidth="0" privatespace="false">
+    <REG numregparts="1" desc="Busy bit - When '1' not ready to accept new data" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="1" msb="0" lsb="0" addr="0"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="Ready bit - Output data is ready when 'Control' reg value matches 'Ready' " origin="motor_kit_sim_20MHz/MotorModel/AvalonRegisters/DSPBA_Ready" clashes="false" rwmode="Read" bitwidth="1" fracwidth="0" privatespace="false">
+    <REG numregparts="1" desc="Ready bit - Output data is ready when 'Control' reg value matches 'Ready' " clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="1" msb="0" lsb="0" addr="3"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="Start bit - toggle bit value once to start" origin="motor_kit_sim_20MHz/MotorModel/AvalonRegisters/DSPBA_Start" clashes="false" rwmode="Read/Write" bitwidth="1" fracwidth="0" privatespace="false">
+    <REG numregparts="1" desc="Start bit - toggle bit value once to start" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="1" msb="0" lsb="0" addr="1"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="Iabc range input value" origin="motor_kit_sim_20MHz/MotorModel/AvalonRegisters/Iabc_range_CFG" clashes="false" rwmode="Read/Write" bitwidth="16" fracwidth="0" privatespace="false">
+    <REG numregparts="1" desc="Iabc range input value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="47"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="Ke_cfg input value" origin="motor_kit_sim_20MHz/MotorModel/AvalonRegisters/Ke_CFG" clashes="false" rwmode="Read/Write" bitwidth="16" fracwidth="16" privatespace="false">
+    <REG numregparts="1" desc="Ke_cfg input value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="20"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="Kt_cfg input value" origin="motor_kit_sim_20MHz/MotorModel/AvalonRegisters/Kt_CFG" clashes="false" rwmode="Read/Write" bitwidth="16" fracwidth="16" privatespace="false">
+    <REG numregparts="1" desc="Kt_cfg input value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="21"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="LoadT input value" origin="motor_kit_sim_20MHz/MotorModel/AvalonRegisters/LoadT_Input" clashes="false" rwmode="Read/Write" bitwidth="16" fracwidth="14" privatespace="false">
+    <REG numregparts="1" desc="LoadT input value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="35"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="PolePairs_cfg input value" origin="motor_kit_sim_20MHz/MotorModel/AvalonRegisters/PolePairs_CFG" clashes="false" rwmode="Read/Write" bitwidth="16" fracwidth="14" privatespace="false">
+    <REG numregparts="1" desc="PolePairs_cfg input value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="19"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="Rphase_cfg input value" origin="motor_kit_sim_20MHz/MotorModel/AvalonRegisters/Rphase_CFG" clashes="false" rwmode="Read/Write" bitwidth="16" fracwidth="16" privatespace="false">
+    <REG numregparts="1" desc="Rphase_cfg input value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="17"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="SampleTime_cfg input value" origin="motor_kit_sim_20MHz/MotorModel/AvalonRegisters/Sample_Time_CFG" clashes="false" rwmode="Read/Write" bitwidth="16" fracwidth="39" privatespace="false">
+    <REG numregparts="1" desc="SampleTime_cfg input value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="16"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="ThetaMech one turn output value" origin="motor_kit_sim_20MHz/MotorModel/AvalonRegisters/ThetaMech_Output" clashes="false" rwmode="Read" bitwidth="16" fracwidth="16" privatespace="false">
+    <REG numregparts="1" desc="ThetaMech one turn output value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="55"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="Va input value" origin="motor_kit_sim_20MHz/MotorModel/AvalonRegisters/Va_Input" clashes="false" rwmode="Read/Write" bitwidth="16" fracwidth="6" privatespace="false">
+    <REG numregparts="1" desc="Va input value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="32"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="Vabc range Input value." origin="motor_kit_sim_20MHz/MotorModel/AvalonRegisters/Vabc_range_CFG" clashes="false" rwmode="Read/Write" bitwidth="16" fracwidth="0" privatespace="false">
+    <REG numregparts="1" desc="Vabc range Input value." clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="31"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="Vb input value" origin="motor_kit_sim_20MHz/MotorModel/AvalonRegisters/Vb_Input" clashes="false" rwmode="Read/Write" bitwidth="16" fracwidth="6" privatespace="false">
+    <REG numregparts="1" desc="Vb input value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="33"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="Vc input value" origin="motor_kit_sim_20MHz/MotorModel/AvalonRegisters/Vc_Input" clashes="false" rwmode="Read/Write" bitwidth="16" fracwidth="6" privatespace="false">
+    <REG numregparts="1" desc="Vc input value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="34"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="dTheta_dt rad_s output value" origin="motor_kit_sim_20MHz/MotorModel/AvalonRegisters/dTheta_dt_Output" clashes="false" rwmode="Read" bitwidth="16" fracwidth="6" privatespace="false">
+    <REG numregparts="1" desc="dTheta_dt rad_s output value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="54"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="ia output value" origin="motor_kit_sim_20MHz/MotorModel/AvalonRegisters/ia_Output" clashes="false" rwmode="Read" bitwidth="16" fracwidth="9" privatespace="false">
+    <REG numregparts="1" desc="ia output value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="48"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="ib output value" origin="motor_kit_sim_20MHz/MotorModel/AvalonRegisters/ib_Output" clashes="false" rwmode="Read" bitwidth="16" fracwidth="9" privatespace="false">
+    <REG numregparts="1" desc="ib output value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="49"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="ic output value" origin="motor_kit_sim_20MHz/MotorModel/AvalonRegisters/ic_Output" clashes="false" rwmode="Read" bitwidth="16" fracwidth="9" privatespace="false">
+    <REG numregparts="1" desc="ic output value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="50"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="inv_J_cfg input value" origin="motor_kit_sim_20MHz/MotorModel/AvalonRegisters/inv_J_CFG" clashes="false" rwmode="Read/Write" bitwidth="16" fracwidth="0" privatespace="false">
+    <REG numregparts="1" desc="inv_J_cfg input value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="22"/>
+    </REG>
+  </REGS>
+  <REGS numregs="1" desc="inv_Lphase_cfg input value" origin="motor_kit_sim_20MHz/MotorModel/AvalonRegisters/inv_Lphase_CFG" clashes="false" rwmode="Read/Write" bitwidth="16" fracwidth="6" privatespace="false">
+    <REG numregparts="1" desc="inv_Lphase_cfg input value" clashes="false" double_init="0.000000" sint_init="0">
+      <REGPART part_init="0" part_double_init="0.000000" clashes="false" width="16" msb="15" lsb="0" addr="18"/>
+    </REG>
+  </REGS>
+</MEMORYMAPS>
+<RESOURCES>
+<FUNIT>
+ <FUNAME>motor_kit_sim_20MHz/MotorModel</FUNAME>
+ <FUTYPE>SYNTH</FUTYPE>
+ <LUT4>1184</LUT4>
+ <MULT>0</MULT>
+ <BITS>0</BITS>
+ <BLOCKS>0</BLOCKS>
+</FUNIT>
+<FUNIT>
+ <FUNAME>motor_kit_sim_20MHz/MotorModel/AvalonRegisters</FUNAME>
+ <FUTYPE>SYNTH</FUTYPE>
+ <LUT4>0</LUT4>
+ <MULT>0</MULT>
+ <BITS>0</BITS>
+ <BLOCKS>0</BLOCKS>
+</FUNIT>
+<FUNIT>
+ <FUNAME>motor_kit_sim_20MHz/MotorModel/Current_scale_64_</FUNAME>
+ <FUTYPE>SYNTH</FUTYPE>
+ <LUT4>1033</LUT4>
+ <MULT>11</MULT>
+ <BITS>27136</BITS>
+ <BLOCKS>4</BLOCKS>
+</FUNIT>
+<FUNIT>
+ <FUNAME>motor_kit_sim_20MHz/MotorModel/Current_scale_64_1</FUNAME>
+ <FUTYPE>SYNTH</FUTYPE>
+ <LUT4>1033</LUT4>
+ <MULT>11</MULT>
+ <BITS>27136</BITS>
+ <BLOCKS>4</BLOCKS>
+</FUNIT>
+<FUNIT>
+ <FUNAME>motor_kit_sim_20MHz/MotorModel/Current_scale_64_2</FUNAME>
+ <FUTYPE>SYNTH</FUTYPE>
+ <LUT4>1033</LUT4>
+ <MULT>11</MULT>
+ <BITS>27136</BITS>
+ <BLOCKS>4</BLOCKS>
+</FUNIT>
+<FUNIT>
+ <FUNAME>motor_kit_sim_20MHz/MotorModel/Fraction_to_Pulse</FUNAME>
+ <FUTYPE>SYNTH</FUTYPE>
+ <LUT4>66</LUT4>
+ <MULT>0</MULT>
+ <BITS>0</BITS>
+ <BLOCKS>0</BLOCKS>
+</FUNIT>
+<FUNIT>
+ <FUNAME>motor_kit_sim_20MHz/MotorModel/Fraction_to_Pulse1</FUNAME>
+ <FUTYPE>SYNTH</FUTYPE>
+ <LUT4>66</LUT4>
+ <MULT>0</MULT>
+ <BITS>0</BITS>
+ <BLOCKS>0</BLOCKS>
+</FUNIT>
+<FUNIT>
+ <FUNAME>motor_kit_sim_20MHz/MotorModel/Fraction_to_Pulse2</FUNAME>
+ <FUTYPE>SYNTH</FUTYPE>
+ <LUT4>66</LUT4>
+ <MULT>0</MULT>
+ <BITS>0</BITS>
+ <BLOCKS>0</BLOCKS>
+</FUNIT>
+<FUNIT>
+ <FUNAME>motor_kit_sim_20MHz/MotorModel/Fraction_to_Pulse3</FUNAME>
+ <FUTYPE>SYNTH</FUTYPE>
+ <LUT4>66</LUT4>
+ <MULT>0</MULT>
+ <BITS>0</BITS>
+ <BLOCKS>0</BLOCKS>
+</FUNIT>
+<FUNIT>
+ <FUNAME>motor_kit_sim_20MHz/MotorModel/Fraction_to_Pulse4</FUNAME>
+ <FUTYPE>SYNTH</FUTYPE>
+ <LUT4>66</LUT4>
+ <MULT>0</MULT>
+ <BITS>0</BITS>
+ <BLOCKS>0</BLOCKS>
+</FUNIT>
+<FUNIT>
+ <FUNAME>motor_kit_sim_20MHz/MotorModel/Fraction_to_Pulse5</FUNAME>
+ <FUTYPE>SYNTH</FUTYPE>
+ <LUT4>66</LUT4>
+ <MULT>0</MULT>
+ <BITS>0</BITS>
+ <BLOCKS>0</BLOCKS>
+</FUNIT>
+<FUNIT>
+ <FUNAME>motor_kit_sim_20MHz/MotorModel/Fraction_to_Pulse6</FUNAME>
+ <FUTYPE>SYNTH</FUTYPE>
+ <LUT4>66</LUT4>
+ <MULT>0</MULT>
+ <BITS>0</BITS>
+ <BLOCKS>0</BLOCKS>
+</FUNIT>
+<FUNIT>
+ <FUNAME>motor_kit_sim_20MHz/MotorModel/MM_16fixed</FUNAME>
+ <FUTYPE>SYNTH</FUTYPE>
+ <LUT4>6653</LUT4>
+ <MULT>60</MULT>
+ <BITS>55296</BITS>
+ <BLOCKS>4</BLOCKS>
+</FUNIT>
+<FUNIT>
+ <FUNAME>motor_kit_sim_20MHz/MotorModel/Voltage_scale_120_</FUNAME>
+ <FUTYPE>SYNTH</FUTYPE>
+ <LUT4>1030</LUT4>
+ <MULT>11</MULT>
+ <BITS>27136</BITS>
+ <BLOCKS>4</BLOCKS>
+</FUNIT>
+<FUNIT>
+ <FUNAME>motor_kit_sim_20MHz/MotorModel/Voltage_scale_120_1</FUNAME>
+ <FUTYPE>SYNTH</FUTYPE>
+ <LUT4>1030</LUT4>
+ <MULT>11</MULT>
+ <BITS>27136</BITS>
+ <BLOCKS>4</BLOCKS>
+</FUNIT>
+<FUNIT>
+ <FUNAME>motor_kit_sim_20MHz/MotorModel/Voltage_scale_120_2</FUNAME>
+ <FUTYPE>SYNTH</FUTYPE>
+ <LUT4>1030</LUT4>
+ <MULT>11</MULT>
+ <BITS>27136</BITS>
+ <BLOCKS>4</BLOCKS>
+</FUNIT>
+<FUNIT>
+ <FUNAME>motor_kit_sim_20MHz/MotorModel/Voltage_scale_120_link_V</FUNAME>
+ <FUTYPE>SYNTH</FUTYPE>
+ <LUT4>1030</LUT4>
+ <MULT>11</MULT>
+ <BITS>27136</BITS>
+ <BLOCKS>4</BLOCKS>
+</FUNIT>
+</RESOURCES>
+</MODEL>

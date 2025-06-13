@@ -17,14 +17,14 @@ the **"YOCTO"** component compilation.
 
 The Modular Design Toolkit (MDT) requires the following software and versions (in Linux):
 
-* Altera® Quartus® Prime Pro version (24.3 or above), including open-source tools to
+* Altera® Quartus® Prime Pro version (25.1 or above), including open-source tools to
   compile software targeting NiosV soft-processors.
 * Device Support.
-* FPGA NiosV/g Open-Source Tools 24.3 (installed with Quartus® Prime).
+* FPGA NiosV/g Open-Source Tools 25.1 (installed with Quartus® Prime).
 
 Optional
 
-* DSP Builder for Altera® FPGAs Pro Edition v24.3.
+* DSP Builder for Altera® FPGAs Pro Edition v25.1.
 
 <br>
 
