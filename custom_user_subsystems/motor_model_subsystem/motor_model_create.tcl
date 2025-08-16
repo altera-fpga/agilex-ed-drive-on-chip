@@ -51,6 +51,7 @@ proc transfer_files {} {
   set v_project_path      [get_shell_parameter PROJECT_PATH]
   set v_instance_name     [get_shell_parameter INSTANCE_NAME]
   set v_family            [get_shell_parameter FAMILY]
+  set v_speed_grade       [get_shell_parameter SPEED_GRADE]
   #set v_subsys_dir        "${v_shell_design_root}/motor_model_subsystem"
   set v_subsys_dir        [get_shell_parameter SUBSYSTEM_SOURCE_PATH]
 
@@ -70,9 +71,12 @@ proc transfer_files {} {
   # needs to be relative to the model directory
   set v_rtl_dir     "./../../dsp_builder_gen"
 
-  #::hls_build_pkg::dsp_builder_build ${v_model_dir} ${v_model_name} ${v_family} ${v_rtl_dir}
+  #::hls_build_pkg::dsp_builder_build ${v_model_dir} ${v_model_name} ${v_family} ${v_speed_grade} ${v_rtl_dir}
   if {($v_family == "Agilex 5")} {
       file_copy ${v_subsys_dir}/dsp_builder_models/variants/agx5_dsp_builder_gen \
+                ${v_project_path}/non_qpds_ip/dsp_builder_gen
+  } elseif {($v_family == "Agilex 3")} {
+      file_copy ${v_subsys_dir}/dsp_builder_models/variants/agx3_dsp_builder_gen \
                 ${v_project_path}/non_qpds_ip/dsp_builder_gen
   }
 
