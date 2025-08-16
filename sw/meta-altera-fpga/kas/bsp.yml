@@ -7,5 +7,6 @@ local_conf_header:
     PREFERRED_VERSION_linux-socfpga-rt ?= "6.12%"
     PREFERRED_PROVIDER_virtual/bootloader ?= "u-boot-socfpga"
     PREFERRED_VERSION_u-boot-socfpga ?= "v2025.01%"
+    PREFERRED_VERSION_arm-trusted-firmware ?= "v2.12"
     IMAGE_TYPE ?= "mmc"
 

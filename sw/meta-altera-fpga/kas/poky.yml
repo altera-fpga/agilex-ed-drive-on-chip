@@ -3,6 +3,7 @@ header:
 repos:
   poky:
     url: "https://git.yoctoproject.org/git/poky"
+    commit: 6f7e929ea6ea557f107c8ccffea69a7d73439591
     branch: scarthgap
     path: layers/poky
     layers:
