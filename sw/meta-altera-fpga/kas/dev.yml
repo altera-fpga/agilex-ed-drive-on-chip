@@ -3,6 +3,7 @@ header:
 repos:
   meta-oe:
     url: "https://git.openembedded.org/meta-openembedded"
+    commit: 205638f9edf8e1aa1fbcf28555625fe56f2701a5
     branch: scarthgap
     path: layers/meta-openembedded
     layers:

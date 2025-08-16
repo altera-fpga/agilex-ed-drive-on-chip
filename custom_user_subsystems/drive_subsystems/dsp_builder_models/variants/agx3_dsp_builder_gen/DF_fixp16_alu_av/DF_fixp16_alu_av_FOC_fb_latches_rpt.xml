@@ -1,0 +1,21 @@
+<?xml version='1.0'?>
+<island simulinkPath='DF_fixp16_alu_av/FOC/fb_latches' topLevelEntity='DF_fixp16_alu_av_FOC_fb_latches'>
+    <port name='clk' dir='in' role='clock'/>
+    <port name='areset' dir='in' clock='clk' role='resetHigh'/>
+    <port name='in_6_axis_in_tpl' clock='clk' reset='areset' width='8' dir='in' role='data' qsys_role='data_in_6_axis_in_tpl' stm='DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_fb_latches_GPIn.stm' highLevelName='axis_in' highLevelIndex='6' vector='0' complex='0'/>
+    <port name='in_5_axis_out_tpl' clock='clk' reset='areset' width='8' dir='in' role='data' qsys_role='data_in_5_axis_out_tpl' stm='DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_fb_latches_GPIn1.stm' highLevelName='axis_out' highLevelIndex='5' vector='0' complex='0'/>
+    <port name='in_1_id_int_tpl' clock='clk' reset='areset' width='16' dir='in' role='data' qsys_role='data_in_1_id_int_tpl' stm='DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_fb_latches_GPIn2.stm' highLevelName='id_int' highLevelIndex='1' vector='0' complex='0'/>
+    <port name='in_4_valid_out_tpl' clock='clk' reset='areset' width='1' dir='in' role='data' qsys_role='data_in_4_valid_out_tpl' stm='DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_fb_latches_GPIn3.stm' highLevelName='valid_out' highLevelIndex='4' vector='0' complex='0'/>
+    <port name='in_3_qv_tpl' clock='clk' reset='areset' width='1' dir='in' role='data' qsys_role='data_in_3_qv_tpl' stm='DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_fb_latches_GPIn4.stm' highLevelName='qv' highLevelIndex='3' vector='0' complex='0'/>
+    <port name='in_2_iq_int_tpl' clock='clk' reset='areset' width='16' dir='in' role='data' qsys_role='data_in_2_iq_int_tpl' stm='DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_fb_latches_GPIn5.stm' highLevelName='iq_int' highLevelIndex='2' vector='0' complex='0'/>
+    <port name='in_7_reset_tpl' clock='clk' reset='areset' width='1' dir='in' role='data' qsys_role='data_in_7_reset_tpl' stm='DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_fb_latches_GPIn6.stm' highLevelName='reset' highLevelIndex='7' vector='0' complex='0'/>
+    <port name='out_2_iq_int_latch_tpl' clock='clk' reset='areset' width='16' dir='out' role='data' qsys_role='data_out_2_iq_int_latch_tpl' stm='DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_fb_latches_GPOut1.stm' highLevelName='iq_int_latch' highLevelIndex='2' vector='0' complex='0'/>
+    <port name='out_1_id_int_latch_tpl' clock='clk' reset='areset' width='16' dir='out' role='data' qsys_role='data_out_1_id_int_latch_tpl' stm='DF_fixp16_alu_av/DF_fixp16_alu_av_FOC_fb_latches_GPOut2.stm' highLevelName='id_int_latch' highLevelIndex='1' vector='0' complex='0'/>
+    <file path='eda/sim_lib/altera_mf_components.vhd' base='quartus' type='vhdl' usage='simOnly' lib='altera_mf'/>
+    <file path='eda/sim_lib/altera_mf.vhd' base='quartus' type='vhdl' usage='simOnly' lib='altera_mf'/>
+    <file path='eda/sim_lib/altera_lnsim_components.vhd' base='quartus' type='vhdl' usage='simOnly' lib='altera_lnsim'/>
+    <file path='eda/sim_lib/altera_lnsim.sv' base='quartus' type='vhdl' usage='simOnly' lib='altera_lnsim'/>
+    <file path='eda/sim_lib/tennm_atoms.vhd' base='quartus' type='vhdl' usage='simOnly' lib='tennm'/>
+    <file path='eda/sim_lib/tennm_components.vhd' base='quartus' type='vhdl' usage='simOnly' lib='tennm'/>
+    <file path='eda/sim_lib/mentor/tennm_atoms_ncrypt.sv' base='quartus' type='vhdl' usage='simOnly' lib='tennm'/>
+</island>

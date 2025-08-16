@@ -1,0 +1,65 @@
+<?xml version='1.0'?>
+<island simulinkPath='motor_kit_sim_20MHz/MotorModel' topLevelEntity='motor_kit_sim_20MHz_MotorModel'>
+    <port name='clk' dir='in' role='clock'/>
+    <port name='areset' dir='in' clock='clk' role='resetHigh'/>
+    <port name='h_areset' dir='in' clock='clk' role='resetHigh'/>
+    <port name='busIn_writedata' clock='clk' reset='h_areset' width='32' dir='in' role='busData' qsys_role='writedata' stm=''/>
+    <port name='busIn_address' clock='clk' reset='h_areset' width='6' dir='in' role='busAddress' qsys_role='address' stm=''/>
+    <port name='busIn_write' clock='clk' reset='h_areset' width='1' dir='in' role='busWriteEnable' qsys_role='write' stm=''/>
+    <port name='busIn_read' clock='clk' reset='h_areset' width='1' dir='in' role='busReadEnable' qsys_role='read' stm=''/>
+    <port name='busOut_readdatavalid' clock='clk' reset='h_areset' width='1' dir='out' role='busDataValid' qsys_role='readdatavalid' stm=''/>
+    <port name='busOut_readdata' clock='clk' reset='h_areset' width='32' dir='out' role='busData' qsys_role='readdata' stm=''/>
+    <port name='busOut_waitrequest' clock='clk' reset='h_areset' width='1' dir='out' role='busWaitRequest' qsys_role='waitrequest' stm=''/>
+    <port name='u_h' clock='clk' reset='areset' width='1' dir='in' role='data' qsys_role='data_u_h' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_MM_16fixed_ChannelIn.stm' highLevelName='u_h' highLevelIndex='0' vector='0' complex='0'/>
+    <port name='v_h' clock='clk' reset='areset' width='1' dir='in' role='data' qsys_role='data_v_h' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_MM_16fixed_ChannelIn.stm' highLevelName='v_h' highLevelIndex='1' vector='0' complex='0'/>
+    <port name='w_h' clock='clk' reset='areset' width='1' dir='in' role='data' qsys_role='data_w_h' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_MM_16fixed_ChannelIn.stm' highLevelName='w_h' highLevelIndex='2' vector='0' complex='0'/>
+    <port name='u_l' clock='clk' reset='areset' width='1' dir='in' role='data' qsys_role='data_u_l' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_MM_16fixed_ChannelIn.stm' highLevelName='u_l' highLevelIndex='3' vector='0' complex='0'/>
+    <port name='v_l' clock='clk' reset='areset' width='1' dir='in' role='data' qsys_role='data_v_l' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_MM_16fixed_ChannelIn.stm' highLevelName='v_l' highLevelIndex='4' vector='0' complex='0'/>
+    <port name='w_l' clock='clk' reset='areset' width='1' dir='in' role='data' qsys_role='data_w_l' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_MM_16fixed_ChannelIn.stm' highLevelName='w_l' highLevelIndex='5' vector='0' complex='0'/>
+    <port name='powerdown_p' clock='clk' reset='areset' width='1' dir='in' role='data' qsys_role='data_powerdown_p' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_MM_16fixed_ChannelIn.stm' highLevelName='powerdown_p' highLevelIndex='6' vector='0' complex='0'/>
+    <port name='powerdown_n' clock='clk' reset='areset' width='1' dir='in' role='data' qsys_role='data_powerdown_n' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_MM_16fixed_ChannelIn.stm' highLevelName='powerdown_n' highLevelIndex='7' vector='0' complex='0'/>
+    <port name='ia_sd' clock='clk' reset='areset' width='1' dir='out' role='data' qsys_role='data_ia_sd' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse_GPOut.stm' highLevelName='ia_sd' highLevelIndex='0' vector='0' complex='0'/>
+    <port name='ib_sd' clock='clk' reset='areset' width='1' dir='out' role='data' qsys_role='data_ib_sd' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse1_GPOut.stm' highLevelName='ib_sd' highLevelIndex='1' vector='0' complex='0'/>
+    <port name='ic_sd' clock='clk' reset='areset' width='1' dir='out' role='data' qsys_role='data_ic_sd' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse2_GPOut.stm' highLevelName='ic_sd' highLevelIndex='2' vector='0' complex='0'/>
+    <port name='Va_sd' clock='clk' reset='areset' width='1' dir='out' role='data' qsys_role='data_Va_sd' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse3_GPOut.stm' highLevelName='Va_sd' highLevelIndex='3' vector='0' complex='0'/>
+    <port name='Vb_sd' clock='clk' reset='areset' width='1' dir='out' role='data' qsys_role='data_Vb_sd' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse4_GPOut.stm' highLevelName='Vb_sd' highLevelIndex='4' vector='0' complex='0'/>
+    <port name='Vc_sd' clock='clk' reset='areset' width='1' dir='out' role='data' qsys_role='data_Vc_sd' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse5_GPOut.stm' highLevelName='Vc_sd' highLevelIndex='5' vector='0' complex='0'/>
+    <port name='QEP_A' clock='clk' reset='areset' width='1' dir='out' role='data' qsys_role='data_QEP_A' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_MM_16fixed_ChannelOut.stm' highLevelName='QEP_A' highLevelIndex='6' vector='0' complex='0'/>
+    <port name='QEP_B' clock='clk' reset='areset' width='1' dir='out' role='data' qsys_role='data_QEP_B' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_MM_16fixed_ChannelOut.stm' highLevelName='QEP_B' highLevelIndex='7' vector='0' complex='0'/>
+    <port name='Theta_one_turn_k' clock='clk' reset='areset' width='16' dir='out' role='data' qsys_role='data_Theta_one_turn_k' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_MM_16fixed_ChannelOut.stm' highLevelName='Theta_one_turn_k' highLevelIndex='8' vector='0' complex='0'/>
+    <port name='V_DC_link_sd' clock='clk' reset='areset' width='1' dir='out' role='data' qsys_role='data_V_DC_link_sd' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse6_GPOut.stm' highLevelName='V_DC_link_sd' highLevelIndex='9' vector='0' complex='0'/>
+    <file path='eda/sim_lib/altera_mf_components.vhd' base='quartus' type='vhdl' usage='simOnly' lib='altera_mf'/>
+    <file path='eda/sim_lib/altera_mf.vhd' base='quartus' type='vhdl' usage='simOnly' lib='altera_mf'/>
+    <file path='eda/sim_lib/altera_lnsim_components.vhd' base='quartus' type='vhdl' usage='simOnly' lib='altera_lnsim'/>
+    <file path='eda/sim_lib/altera_lnsim.sv' base='quartus' type='vhdl' usage='simOnly' lib='altera_lnsim'/>
+    <file path='eda/sim_lib/tennm_atoms.vhd' base='quartus' type='vhdl' usage='simOnly' lib='tennm'/>
+    <file path='eda/sim_lib/tennm_components.vhd' base='quartus' type='vhdl' usage='simOnly' lib='tennm'/>
+    <file path='eda/sim_lib/mentor/tennm_atoms_ncrypt.sv' base='quartus' type='vhdl' usage='simOnly' lib='tennm'/>
+    <file path='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_safe_path_msim.vhd' base='rtl' type='vhdl' usage='simOnly'/>
+    <file path='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_safe_path.vhd' base='rtl' type='vhdl' usage='synthOnly'/>
+    <file path='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel.vhd' base='rtl' type='vhdl' usage='all'/>
+    <file path='backend/Libraries/vhdl/base/dspba_library_package.vhd' base='dspba' type='vhdl' usage='all'/>
+    <file path='backend/Libraries/vhdl/base/dspba_library.vhd' base='dspba' type='vhdl' usage='all'/>
+    <file path='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_AvalonRegisters.vhd' base='rtl' type='vhdl' usage='all'/>
+    <file path='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_CurrentScale.vhd' base='rtl' type='vhdl' usage='all'/>
+    <file path='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse.vhd' base='rtl' type='vhdl' usage='all'/>
+    <file path='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse1.vhd' base='rtl' type='vhdl' usage='all'/>
+    <file path='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse2.vhd' base='rtl' type='vhdl' usage='all'/>
+    <file path='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse3.vhd' base='rtl' type='vhdl' usage='all'/>
+    <file path='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse4.vhd' base='rtl' type='vhdl' usage='all'/>
+    <file path='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse5.vhd' base='rtl' type='vhdl' usage='all'/>
+    <file path='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse6.vhd' base='rtl' type='vhdl' usage='all'/>
+    <file path='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_MM_16fixed.vhd' base='rtl' type='vhdl' usage='all'/>
+    <file path='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_MM_16fixed_sinPiAT_uid517_motor_kit_sim_20MHz_Mot0000fixed_Trig1_x_lutmem.hex' base='rtl' type='data' usage='all'/>
+    <file path='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_MM_16fixed_cosPiAT_uid520_motor_kit_sim_20MHz_Mot0000fixed_Trig1_x_lutmem.hex' base='rtl' type='data' usage='all'/>
+    <file path='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_MM_16fixed_sinPiAT_uid580_motor_kit_sim_20MHz_Mot0000fixed_Trig2_x_lutmem.hex' base='rtl' type='data' usage='all'/>
+    <file path='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_MM_16fixed_cosPiAT_uid583_motor_kit_sim_20MHz_Mot0000fixed_Trig2_x_lutmem.hex' base='rtl' type='data' usage='all'/>
+    <file path='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_VoltageScale.vhd' base='rtl' type='vhdl' usage='all'/>
+    <file path='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Voltage_scale_120_link_V.vhd' base='rtl' type='vhdl' usage='all'/>
+    <file path='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Voltage_scale_120_link_V_memoryC0_uid83_invTabGen_lutmem.hex' base='rtl' type='data' usage='all'/>
+    <file path='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Voltage_scale_120_link_V_memoryC1_uid86_invTabGen_lutmem.hex' base='rtl' type='data' usage='all'/>
+    <file path='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Voltage_scale_120_link_V_memoryC2_uid89_invTabGen_lutmem.hex' base='rtl' type='data' usage='all'/>
+    <file path='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Voltage_scale_120_link_V_memoryC3_uid92_invTabGen_lutmem.hex' base='rtl' type='data' usage='all'/>
+    <file path='motor_kit_sim_20MHz/busFabric_motor_kit_sim_20MHz_MotorModel_3u16i2om0uz0063663c61i65i65o64160uq5ux5gv9sqcz.vhd' base='rtl' type='vhdl' usage='all'/>
+
+</island>
