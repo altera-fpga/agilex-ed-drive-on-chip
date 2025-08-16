@@ -1,0 +1,20 @@
+<?xml version='1.0'?>
+<island simulinkPath='motor_kit_sim_20MHz/MotorModel/VoltageScale' topLevelEntity='motor_kit_sim_20MHz_MotorModel_VoltageScale'>
+    <port name='clk' dir='in' role='clock'/>
+    <port name='areset' dir='in' clock='clk' role='resetHigh'/>
+    <port name='in_1_Voltage_range_int16_tpl' clock='clk' reset='areset' width='16' dir='in' role='data' qsys_role='data_in_1_Voltage_range_int16_tpl' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_VoltageScale_GPIn.stm' highLevelName='Voltage_range_int16' highLevelIndex='1' vector='0' complex='0'/>
+    <port name='in_2_VoltageA_sfix16_En6_tpl' clock='clk' reset='areset' width='16' dir='in' role='data' qsys_role='data_in_2_VoltageA_sfix16_En6_tpl' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_VoltageScale_GPIn1.stm' highLevelName='VoltageA_sfix16_En6' highLevelIndex='2' vector='0' complex='0'/>
+    <port name='in_4_VoltageC_sfix16_En6_tpl' clock='clk' reset='areset' width='16' dir='in' role='data' qsys_role='data_in_4_VoltageC_sfix16_En6_tpl' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_VoltageScale_GPIn3.stm' highLevelName='VoltageC_sfix16_En6' highLevelIndex='4' vector='0' complex='0'/>
+    <port name='in_3_VoltageB_sfix16_En6_tpl' clock='clk' reset='areset' width='16' dir='in' role='data' qsys_role='data_in_3_VoltageB_sfix16_En6_tpl' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_VoltageScale_GPIn5.stm' highLevelName='VoltageB_sfix16_En6' highLevelIndex='3' vector='0' complex='0'/>
+    <port name='out_1_FractionA_ND_ufix16_En16_x_tpl' clock='clk' reset='areset' width='16' dir='out' role='data' qsys_role='data_out_1_FractionA_ND_ufix16_En16_x_tpl' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_VoltageScale_GPOut.stm' highLevelName='FractionA_ND_ufix16_En16
+' highLevelIndex='1' vector='0' complex='0'/>
+    <port name='out_3_FractionC_ND_ufix16_En16_tpl' clock='clk' reset='areset' width='16' dir='out' role='data' qsys_role='data_out_3_FractionC_ND_ufix16_En16_tpl' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_VoltageScale_GPOut1.stm' highLevelName='FractionC_ND_ufix16_En16' highLevelIndex='3' vector='0' complex='0'/>
+    <port name='out_2_FractionB_ND_ufix16_En16_tpl' clock='clk' reset='areset' width='16' dir='out' role='data' qsys_role='data_out_2_FractionB_ND_ufix16_En16_tpl' stm='motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_VoltageScale_GPOut2.stm' highLevelName='FractionB_ND_ufix16_En16' highLevelIndex='2' vector='0' complex='0'/>
+    <file path='eda/sim_lib/altera_mf_components.vhd' base='quartus' type='vhdl' usage='simOnly' lib='altera_mf'/>
+    <file path='eda/sim_lib/altera_mf.vhd' base='quartus' type='vhdl' usage='simOnly' lib='altera_mf'/>
+    <file path='eda/sim_lib/altera_lnsim_components.vhd' base='quartus' type='vhdl' usage='simOnly' lib='altera_lnsim'/>
+    <file path='eda/sim_lib/altera_lnsim.sv' base='quartus' type='vhdl' usage='simOnly' lib='altera_lnsim'/>
+    <file path='eda/sim_lib/tennm_atoms.vhd' base='quartus' type='vhdl' usage='simOnly' lib='tennm'/>
+    <file path='eda/sim_lib/tennm_components.vhd' base='quartus' type='vhdl' usage='simOnly' lib='tennm'/>
+    <file path='eda/sim_lib/mentor/tennm_atoms_ncrypt.sv' base='quartus' type='vhdl' usage='simOnly' lib='tennm'/>
+</island>

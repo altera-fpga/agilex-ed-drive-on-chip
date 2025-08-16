@@ -1,0 +1,17 @@
+# This is the QIP file for DSP Builder for Altera FPGAs system 'motor_kit_sim_20MHz_MotorModel'
+
+set_global_assignment -name VHDL_FILE ./../../dsp_builder_gen/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_safe_path.vhd
+set_global_assignment -name VHDL_FILE ./../../dsp_builder_gen/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel.vhd
+set_global_assignment -name QIP_FILE ./../../dsp_builder_gen/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_AvalonRegisters.qip
+set_global_assignment -name QIP_FILE ./../../dsp_builder_gen/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_CurrentScale.qip
+set_global_assignment -name QIP_FILE ./../../dsp_builder_gen/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse.qip
+set_global_assignment -name QIP_FILE ./../../dsp_builder_gen/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse1.qip
+set_global_assignment -name QIP_FILE ./../../dsp_builder_gen/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse2.qip
+set_global_assignment -name QIP_FILE ./../../dsp_builder_gen/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse3.qip
+set_global_assignment -name QIP_FILE ./../../dsp_builder_gen/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse4.qip
+set_global_assignment -name QIP_FILE ./../../dsp_builder_gen/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse5.qip
+set_global_assignment -name QIP_FILE ./../../dsp_builder_gen/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse6.qip
+set_global_assignment -name QIP_FILE ./../../dsp_builder_gen/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_MM_16fixed.qip
+set_global_assignment -name QIP_FILE ./../../dsp_builder_gen/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_VoltageScale.qip
+set_global_assignment -name QIP_FILE ./../../dsp_builder_gen/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Voltage_scale_120_link_V.qip
+set_global_assignment -name QIP_FILE ./../../dsp_builder_gen/motor_kit_sim_20MHz/busFabric_motor_kit_sim_20MHz_MotorModel_3u16i2om0uz0063663c61i65i65o64160uq5ux5gv9sqcz.qip

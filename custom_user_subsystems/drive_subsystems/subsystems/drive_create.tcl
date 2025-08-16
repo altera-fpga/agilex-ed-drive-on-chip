@@ -71,6 +71,9 @@ proc transfer_files {} {
   if {($v_family == "Agilex 5")} {
       file_copy ${v_subsystem_source_path}/../dsp_builder_models/variants/agx5_dsp_builder_gen \
                 ${v_project_path}/non_qpds_ip/dsp_builder_gen
+  } elseif {($v_family == "Agilex 3")} {
+      file_copy ${v_subsystem_source_path}/../dsp_builder_models/variants/agx3_dsp_builder_gen \
+                ${v_project_path}/non_qpds_ip/dsp_builder_gen
   }
 
   file_copy ${v_subsystem_source_path}/../non_qpds_ip/ssg_emb_dsm            ${v_project_path}/non_qpds_ip/user

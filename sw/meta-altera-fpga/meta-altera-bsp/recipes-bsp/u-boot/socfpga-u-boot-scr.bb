@@ -23,7 +23,7 @@ do_configure() {
     rm -f ${S}/uboot.txt
 
     if [ "${IMAGE_TYPE}" = "mmc" ]; then
-        if [ "${@bb.utils.contains('SOCFPGA_FEATURES', 'bitstream', 'true', 'false', d)}" ]; then
+        if [ "${@bb.utils.contains('SOCFPGA_FEATURES', 'bitstream', 'true', 'false', d)}" = "true" ]; then
             echo 'load mmc 0:1 ${DOLLAR}{loadaddr} top.core.rbf && dcache flush; fpga load 0 ${DOLLAR}{loadaddr} ${DOLLAR}{filesize};' >> ${S}/uboot.txt
         fi
 
@@ -32,7 +32,7 @@ do_configure() {
         echo 'load mmc 0:1 ${DOLLAR}{fdt_addr_r} ${DTS_NAME}.dtb;' >> ${S}/uboot.txt
         echo 'setenv bootargs "${IMAGE_BOOT_ARGS} root=${DOLLAR}{mmcroot} rw rootwait";' >> ${S}/uboot.txt
 
-        if [ "${@bb.utils.contains('SOCFPGA_FEATURES', 'bitstream', 'true', 'false', d)}" ]; then
+        if [ "${@bb.utils.contains('SOCFPGA_FEATURES', 'bitstream', 'true', 'false', d)}" = "true" ]; then
             echo 'bridge enable;' >> ${S}/uboot.txt
         fi
 

@@ -1,0 +1,19 @@
+# This is the Run ModelSim file list for 'motor_kit_sim_20MHz_MotorModel'
+
+if {![info exist use_own_safe_path] || ![string equal -nocase $use_own_safe_path true]} {
+    vcom -93 -quiet $base_dir/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_safe_path_msim.vhd
+}
+vcom -93 -quiet $base_dir/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel.vhd
+source $base_dir/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_AvalonRegisters.dspb.do
+source $base_dir/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_CurrentScale.dspb.do
+source $base_dir/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse.dspb.do
+source $base_dir/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse1.dspb.do
+source $base_dir/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse2.dspb.do
+source $base_dir/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse3.dspb.do
+source $base_dir/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse4.dspb.do
+source $base_dir/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse5.dspb.do
+source $base_dir/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Fraction_to_Pulse6.dspb.do
+source $base_dir/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_MM_16fixed.dspb.do
+source $base_dir/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_VoltageScale.dspb.do
+source $base_dir/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_Voltage_scale_120_link_V.dspb.do
+source $base_dir/motor_kit_sim_20MHz/busFabric_motor_kit_sim_20MHz_MotorModel_3u16i2om0uz0063663c61i65i65o64160uq5ux5gv9sqcz.dspb.do

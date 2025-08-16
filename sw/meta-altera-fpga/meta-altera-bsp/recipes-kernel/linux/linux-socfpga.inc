@@ -22,6 +22,7 @@ SRC_URI:append = "${@bb.utils.contains('SOCFPGA_FEATURES', 'gpio_sys', ' file://
 SRC_URI:append = "${@bb.utils.contains('SOCFPGA_FEATURES', 'usb_adapter', ' file://usb_adapter.scc', '', d)}"
 SRC_URI:append = "${@bb.utils.contains('SOCFPGA_FEATURES', 'uio', ' file://uio.scc', '', d)}"
 SRC_URI:append = "${@bb.utils.contains('SOCFPGA_FEATURES', 'agilex5', ' file://agilex5.scc', '', d)}"
+SRC_URI:append = "${@bb.utils.contains('SOCFPGA_FEATURES', 'rt', ' file://rt.scc', '', d)}"
 
 require recipes-kernel/linux/linux-yocto.inc
 

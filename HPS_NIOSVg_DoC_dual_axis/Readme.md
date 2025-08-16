@@ -40,6 +40,12 @@ daughter cards and other components.
 
 ### Create this hardware design using the Modular Design Toolkit (MDT)
 
+Available XML (design description file):
+
+* `AGX_3C_Devkit_HPS_NIOSVg_DoC_dual_axis.xml` for [Agilex™ 3 FPGA C-Series Development Kit](https://www.intel.com/content/www/us/en/products/details/fpga/development-kits/agilex/a3y135b.html)
+* `AGX_5E_Modular_Devkit_HPS_NIOSVg_DoC_dual_axis.xml` for [Agilex™ 5 FPGA E-Series 065B Modular Development Kit](https://www.intel.com/content/www/us/en/products/details/fpga/development-kits/agilex/a5e065b-modular.html)
+<br>
+
 Follow the next steps to create the Quartus® and Platform Designer Project for
 [Agilex™ 5 FPGA E-Series 065B Modular Development Kit](https://www.intel.com/content/www/us/en/products/details/fpga/development-kits/agilex/a5e065b-modular.html)
 You can select any other available XML targeting other boards from the `HPS_NIOSVg_DoC_dual_axis` directory.

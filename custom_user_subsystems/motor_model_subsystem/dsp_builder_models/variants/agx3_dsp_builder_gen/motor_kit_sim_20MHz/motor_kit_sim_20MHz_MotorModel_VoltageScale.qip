@@ -1,0 +1,4 @@
+# This is the QIP file for DSP Builder for Altera FPGAs system 'motor_kit_sim_20MHz_MotorModel_VoltageScale'
+
+set_global_assignment -name VHDL_FILE ./../../dsp_builder_gen/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_safe_path.vhd
+set_global_assignment -name VHDL_FILE ./../../dsp_builder_gen/motor_kit_sim_20MHz/motor_kit_sim_20MHz_MotorModel_VoltageScale.vhd
