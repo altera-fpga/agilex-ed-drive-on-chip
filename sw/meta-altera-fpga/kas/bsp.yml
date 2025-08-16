@@ -3,9 +3,14 @@ header:
 local_conf_header:
   meta-altera-fpga-bsp: |
     PREFERRED_PROVIDER_virtual/kernel ?= "linux-socfpga"
-    PREFERRED_VERSION_linux-socfpga ?= "6.12%"
-    PREFERRED_VERSION_linux-socfpga-rt ?= "6.12%"
+    PREFERRED_VERSION_linux-socfpga ?= "6.12.11%"
+    PREFERRED_VERSION_linux-socfpga:agilex3 ?= "6.12.19%"
+    PREFERRED_VERSION_linux-socfpga-rt ?= "6.12.11%"
+    PREFERRED_VERSION_linux-socfpga-rt:agilex3 ?= "6.12.19%"
     PREFERRED_PROVIDER_virtual/bootloader ?= "u-boot-socfpga"
     PREFERRED_VERSION_u-boot-socfpga ?= "v2025.01%"
+    PREFERRED_VERSION_u-boot-socfpga:agilex3 ?= "v2025.04%"
+    PREFERRED_VERSION_arm-trusted-firmware ?= "v2.12"
+    PREFERRED_VERSION_arm-trusted-firmware:agilex3 ?= "v2.12.1%"
     IMAGE_TYPE ?= "mmc"
 

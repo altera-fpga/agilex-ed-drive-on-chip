@@ -9,6 +9,7 @@ Config and Yocto layers for building a Linux image to run on supported Altera So
 ## Supported Machines
 
  - `agilex5_mk_a5e065bb32aes1`
+ - `agilex3`
 
 ## Supported Image Types
 
@@ -23,7 +24,8 @@ KAS_MACHINE=${MACHINE} kas build kas_${DESIGN}.yml
 For example:
 
 ```bash
-KAS_MACHINE=agilex5_mk_a5e065bb32aes1 kas build kas-safety_dual_axis.yml
+cd <this_repository>/sw/
+KAS_MACHINE=agilex5_mk_a5e065bb32aes1 kas build kas_safety_dual_axis.yml
 ```
 
 See above for a list of supported `MACHINE` and `DESIGN` identifiers.

@@ -18,7 +18,7 @@ the **"YOCTO"** component compilation.
 
 The Modular Design Toolkit (MDT) requires the following software and versions (in Linux):
 
-* Altera® Quartus® Prime Pro version (25.1 or above), including open-source tools to
+* Altera® Quartus® Prime Pro version (25.1), including open-source tools to
   compile software targeting NiosV soft-processors.
 * Device Support.
 * FPGA NiosV/g Open-Source Tools 25.1 (installed with Quartus® Prime).
@@ -49,7 +49,7 @@ You can select any other available XML targeting other boards from the `HPS_NIOS
 
 ```bash
 cd <workspace> 
-git clone -b <TAG> --recurse-submodules https://github.com/altera-fpga/agilex-ed-drive-on-chip.git doc-variants
+git clone -b <BRANCH> --recurse-submodules https://github.com/altera-fpga/agilex-ed-drive-on-chip.git doc-variants
 ```
 
 * Navigate to `doc-variants` directory and create your project in a location of your choice `\<project\>`

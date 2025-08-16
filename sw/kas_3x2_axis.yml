@@ -25,4 +25,5 @@ local_conf_header:
     DT_SRC_URI:agilex5_mk_a5e065bb32aes1 ?= "file://agilex5_3x2_axis.dtsi"
     IMAGE_ROOTFS_EXTRA_SPACE = "5242880"
     FPGA_BST_SRC_URI = "file://top.core.rbf"
-    SOCFPGA_FEATURES:append = " bitstream uio"
+    SOCFPGA_FEATURES:append = " bitstream uio rt"
+
