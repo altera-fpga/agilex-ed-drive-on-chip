@@ -1,6 +1,6 @@
 <!--
 ###################################################################################
-# Copyright (C) 2025 Altera Corporation
+# Copyright (C) Altera Corporation
 #
 # This software and the related documents are Altera copyrighted materials, and
 # your use of them is governed by the express license under which they were
@@ -16,8 +16,8 @@
 <PROJECT name="top">
   <DEVKIT>AGX_5E_Modular_Devkit</DEVKIT>
   <FAMILY>Agilex 5</FAMILY>
-  <DEVICE>A5ED065BB32AE6SR0</DEVICE>
-  <VERSION>25.1</VERSION>
+  <DEVICE>A5ED065BB32AE4S</DEVICE>
+  <VERSION>26.1</VERSION>
   <SUBSYSTEM type="clock" name="clock_subsystem">
     <NUM_GEN_CLOCKS>4</NUM_GEN_CLOCKS>
     <GEN_CLK0_NAME>clk_0</GEN_CLK0_NAME>

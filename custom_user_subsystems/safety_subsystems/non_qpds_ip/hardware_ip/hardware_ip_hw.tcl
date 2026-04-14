@@ -1,5 +1,5 @@
 ###################################################################################
-# Copyright (C) 2025 Altera Corporation
+# Copyright (C) Altera Corporation
 #
 # This software and the related documents are Altera copyrighted materials, and
 # your use of them is governed by the express license under which they were
@@ -406,68 +406,40 @@ add_interface_port      dup_cram_good_n       dup_cram_good_n      dup_cram_good
 # ---------------------------------------------------------------------------- #
 proc parse_device {device} {
 
-  set part_device ${device}
-  set part_rebuilt ""
+  if {![regexp {(?x)^
+      ([[:alpha:]][[:digit:]])               # family
+      ([[:alpha:]])                          # series
+      ([[:alpha:]])                          # spec
+      ([[:digit:]]{3})                       # density
+      ([[:alpha:]])                          # group
+      ([[:alpha:]][[:digit:]]{2}[[:alpha:]]) # package
+      ([[:alpha:]])                          # op temp
+      ([[:digit:]])                          # speed
+      ([[:alpha:]])                          # power
+      ([[:alnum:]]*)$                        # optional tail
+      } $device -> \
+      part_family part_series part_spec part_density \
+      part_group part_package part_op_temp part_speed \
+      part_power part_opt]} {
 
-  regexp  {([[:alpha:]][[:digit:]])} ${part_device} part_family
-  set part_device [string replace ${part_device} 0 1 ""]
-  append part_rebuilt ${part_family}
-
-  regexp  {([[:alpha:]])} ${part_device} part_series
-  set part_device [string replace ${part_device} 0 0 ""]
-  append part_rebuilt ${part_series}
-
-  regexp  {([[:alpha:]])} ${part_device} part_spec
-  set part_device [string replace ${part_device} 0 0 ""]
-  append part_rebuilt ${part_spec}
-
-  regexp  {([[:digit:]]{3})} ${part_device} part_density
-  set part_device [string replace ${part_device} 0 2 ""]
-  append part_rebuilt ${part_density}
-
-  regexp  {([[:alpha:]])} ${part_device} part_group
-  set part_device [string replace ${part_device} 0 0 ""]
-  append part_rebuilt ${part_group}
-
-  regexp  {([[:alpha:]][[:digit:]]{2}[[:alpha:]])} ${part_device} part_package
-  set part_device [string replace ${part_device} 0 3 ""]
-  append part_rebuilt ${part_package}
-
-  regexp  {([[:alpha:]])} ${part_device} part_op_temp
-  set part_device [string replace ${part_device} 0 0 ""]
-  append part_rebuilt ${part_op_temp}
-
-  regexp  {([[:digit:]])} ${part_device} part_speed
-  set part_device [string replace ${part_device} 0 0 ""]
-  append part_rebuilt ${part_speed}
-
-  regexp  {([[:alpha:]])} ${part_device} part_power
-  set part_device [string replace ${part_device} 0 0 ""]
-  append part_rebuilt ${part_power}
-
-  regexp  {([[:alnum:]]*)} ${part_device} part_opt
-  append part_rebuilt ${part_opt}
-
-  if {[string equal ${part_rebuilt} ${device}] != 1} {
-    send_message Warning "Parsing device number failed: Original ${device}; Rebuilt ${part_rebuilt}"
+      send_message Warning "Parsing device number failed: $device"
+      return {}
   }
 
-  array set device_specs "
-    FAMILY  ${part_family}
-    SERIES  ${part_series}
-    SPEC    ${part_spec}
-    DENSITY ${part_density}
-    GROUP   ${part_group}
-    PACKAGE ${part_package}
-    OP_TEMP ${part_op_temp}
-    SPEED   ${part_speed}
-    POWER   ${part_power}
-    OPT     ${part_opt}
-  "
-
-  parray device_specs
+  array set device_specs [list \
+      FAMILY  $part_family \
+      SERIES  $part_series \
+      SPEC    $part_spec \
+      DENSITY $part_density \
+      GROUP   $part_group \
+      PACKAGE $part_package \
+      OP_TEMP $part_op_temp \
+      SPEED   $part_speed \
+      POWER   $part_power \
+      OPT     $part_opt]
 
   return [array get device_specs]
+
 }
 
 # ---------------------------------------------------------------------------- #
@@ -494,6 +466,7 @@ proc val_callback {} {
     send_message Info "Index Convert: [get_parameter_value P_INDEX_CONVERT_${v_x}]"
   }
 
+  send_message Info " Device is [get_parameter_value DEVICE]"
   array set v_device_info [parse_device [get_parameter_value DEVICE]]
 
   set_parameter_value P_AG5_SERIES   $v_device_info(SERIES)
@@ -528,7 +501,7 @@ proc elab_callback {} {
         set_instance_parameter_value doc_hw_mailbox {ENABLE_URGENT} {0}
 
     } elseif {${v_dev_fam} == "Agilex 5"} {
-      add_hdl_instance doc_hw_ag5_mailbox intel_mailbox_client 1.0.1
+      add_hdl_instance doc_hw_ag5_mailbox intel_mailbox_client 2.0.0
       set_instance_parameter_value doc_hw_ag5_mailbox {CMD_FIFO_DEPTH} {2}
       set_instance_parameter_value doc_hw_ag5_mailbox {RSP_FIFO_DEPTH} {2}
       set_instance_parameter_value doc_hw_ag5_mailbox {HAS_OFFLOAD}    {0}

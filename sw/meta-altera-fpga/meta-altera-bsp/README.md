@@ -1,4 +1,4 @@
-# Altera BSP Layer
+# Altera® BSP Layer
 
-This layer contains machine metadata and recipes for Altera SoC FPGA platforms.
+This layer contains machine metadata and recipes for Altera® SoC FPGA platforms.
 

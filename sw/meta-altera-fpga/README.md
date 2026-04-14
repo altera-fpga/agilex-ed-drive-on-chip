@@ -1,6 +1,6 @@
-# Altera FPGA Yocto Layers
+# Altera® FPGA Yocto Layers
 
-Altera Yocto layers to support Altera SoC FPGA devices.
+Altera® Yocto layers to support Altera® SoC FPGA devices.
 
 
 ## Board Support
@@ -69,7 +69,7 @@ Open your projects kas config file in your preferred text editor and update the 
 The `altera-fpga` layers are designed to be modular and configurable enabling you to build a bespoke image for your project easily and without additional bloat. The most common configuration options are outlined in the following sections.
 
 ### Layers
-The `altera-bsp` and `altera-core` layers should always be present in your configuration. The `altera-bsp` layer provides the foundational components to build an image for an Altera SoC FPGA board.
+The `altera-bsp` and `altera-core` layers should always be present in your configuration. The `altera-bsp` layer provides the foundational components to build an image for an Altera® SoC FPGA board.
 
 ```
 repos:
@@ -80,7 +80,7 @@ repos:
       meta-altera-core:
 ```
 
-If you intend to build an image for an Altera Soc FPGA Devkit or third-party vendor board you will also need to add the `altera-devkit` or `altera-vendor` layer to your configuration.
+If you intend to build an image for an Altera® SoC FPGA Devkit or third-party vendor board you will also need to add the `altera-devkit` or `altera-vendor` layer to your configuration.
 
 ```
 repos:
@@ -133,10 +133,11 @@ Optional build features can be enabled using the `SOCFPGA_FEATURES` variable in 
 | gpio_sys | Enable sysfs GPIO support in the Linux kernel. |
 | usb_adapter | Enable Linux kernel support for common USB peripherals including network adapters and mass storage devices. |
 | uio | Enable Userspace I/O support in the Linux kernel. |
+| rt | Enable real-time Linux kernel support. |
 
-An example of enabling `bitstream` and `uio` features in your build config:
+An example of enabling `bitstream` and `rt` features in your build config:
 ```
-SOCFPGA_FEATURES:append = " bitstream uio"
+SOCFPGA_FEATURES:append = " bitstream rt"
 ```
 
 ### Optional Configuration
@@ -162,11 +163,29 @@ The `Docker` configuration adds full [Docker](https://www.docker.com/) support t
       file: kas/docker.yml
 ```
 
+#### Intel® RealSense™
+The `RealSense™` configuration adds support for [Intel® RealSense™](https://www.intelrealsense.com/) cameras to an image including the [Intel® RealSense™ SDK](https://github.com/IntelRealSense/librealsense) and tools.
+
+```
+  includes:
+    - repo: meta-altera-fpga
+      file: kas/realsense.yml
+```
+
 ### Boot Arguments
 If you wish to add additional boot arguments you can append the `IMAGE_BOOT_ARGS` variable. For example to enable the `generic-uio` kernel module on boot:
 
 ```
 IMAGE_BOOT_ARGS:append = " uio_pdrv_genirq.of_id=generic-uio"
+```
+
+### Expand Root Partition
+There is a recipe in the `core` layer called `expand-root-partition` which installs a script and `systemd` service in the image which will expand the root partition to fill any remaining disk space on first boot.
+
+To include this functionality add the following line to your build config:
+
+```
+IMAGE_INSTALL:append = " expand-root-partition"
 ```
 
 ## Supported Image Types

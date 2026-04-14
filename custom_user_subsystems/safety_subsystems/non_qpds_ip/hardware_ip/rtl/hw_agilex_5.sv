@@ -1,5 +1,5 @@
 /* ##################################################################################
- * Copyright (C) 2025 Altera Corporation
+ * Copyright (C) Altera Corporation
  *
  * This software and the related documents are Altera copyrighted materials, and
  * your use of them is governed by the express license under which they were
@@ -126,7 +126,7 @@ initial begin
   end else if (P_FAMILY == "Agilex 5") begin
     if (P_AG5_SERIES == "E") begin
 
-      if (P_SPEED_GRADE == "6") begin
+      if ( (P_SPEED_GRADE == "6") ) begin
         // Add elements using key-value pairs
         voltage_ranges[2] = '{32'h0000B165, 32'h0000CA62};      // Channel 2 - VCC
         voltage_ranges[3] = '{32'h0001A3C2, 32'h0001F3B6};      // Channel 3 - VCCIO_SDM
@@ -140,6 +140,20 @@ initial begin
         end //if
         voltage_ranges[7] = '{32'h0000B165, 32'h0000CA62};      // Channel 7 - VCCL_SDM
         voltage_ranges[8] = '{32'h0001A3C2, 32'h0001F3B6};      // Channel 8 - VCCADC
+      end else if ( (P_SPEED_GRADE == "4") ) begin
+        // Add elements using key-value pairs
+        voltage_ranges[2] = '{32'h0000C0B2, 32'h0000D946};      // Channel 2 - VCC
+        voltage_ranges[3] = '{32'h0001A8A1, 32'h0001F25B};      // Channel 3 - VCCIO_SDM
+        voltage_ranges[4] = '{32'h0001B192, 32'h0001E8DD};      // Channel 4 - VCCPT
+        voltage_ranges[5] = '{32'h00011B12, 32'h00014C3D};      // Channel 5 - VCCRRCORE
+        if (  (P_AG5_DENSITY == "005") || (P_AG5_DENSITY == "007") )begin
+          // 005 and 007 devices do not have transceivers and run at a different VCCH_SDM
+          voltage_ranges[6] = '{32'h0000C0B2, 32'h0000D946};    // Channel 6 - VCCH_SDM
+        end else begin
+          voltage_ranges[6] = '{32'h0000F21C, 32'h00010E46};    // Channel 6 - VCCH_SDM
+        end //if
+        voltage_ranges[7] = '{32'h0000C0B2, 32'h0000D946};      // Channel 7 - VCCL_SDM
+        voltage_ranges[8] = '{32'h0001A8A0, 32'h0001F25B};      // Channel 8 - VCCADC
       end //if
 
     end else begin

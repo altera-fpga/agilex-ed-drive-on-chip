@@ -1,5 +1,5 @@
 # ##########################################################################
-# Copyright 2015 - 2024 Altera Corporation.
+# Copyright Altera Corporation.
 #
 # This software and the related documents are Altera copyrighted materials, f
 # and your use of them is governed by the express license under which they
