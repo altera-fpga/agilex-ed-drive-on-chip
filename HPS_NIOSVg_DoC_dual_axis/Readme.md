@@ -42,19 +42,19 @@ daughter cards and other components.
 
 Available XML (design description file):
 
-* `AGX_3C_Devkit_HPS_NIOSVg_DoC_dual_axis.xml` for [Agilex™ 3 FPGA C-Series Development Kit](https://www.intel.com/content/www/us/en/products/details/fpga/development-kits/agilex/a3y135b.html)
-* `AGX_5E_Modular_Devkit_HPS_NIOSVg_DoC_dual_axis.xml` for [Agilex™ 5 FPGA E-Series 065B Modular Development Kit](https://www.intel.com/content/www/us/en/products/details/fpga/development-kits/agilex/a5e065b-modular.html)
+* `AGX_3C_Devkit_HPS_NIOSVg_DoC_dual_axis.xml` for [Agilex™ 3 FPGA C-Series Development Kit](https://www.altera.com/products/devkit/po-3000/agilex-3-fpga-and-soc-c-series-development-kit)
+* `AGX_5E_Modular_Devkit_HPS_NIOSVg_DoC_dual_axis.xml` for [Agilex™ 5 FPGA E-Series 065B Modular Development Kit](https://www.altera.com/products/devkit/po-3001/agilex-5-fpga-and-soc-e-series-modular-development-kit-es)
 <br>
 
 Follow the next steps to create the Quartus® and Platform Designer Project for
-[Agilex™ 5 FPGA E-Series 065B Modular Development Kit](https://www.intel.com/content/www/us/en/products/details/fpga/development-kits/agilex/a5e065b-modular.html)
+[Agilex™ 5 FPGA E-Series 065B Modular Development Kit](https://www.altera.com/products/devkit/po-3001/agilex-5-fpga-and-soc-e-series-modular-development-kit-es)
 You can select any other available XML targeting other boards from the `HPS_NIOSVg_DoC_dual_axis` directory.
 
 * Create your workspace and clone the repository using `--recurse-submodules`:
 
 ```bash
 cd <workspace>
-git clone -b <QUARTUS_REL_TAG> --recurse-submodules https://github.com/intel-innersource/applications.fpga.reference-designs.projects.doc-variants.git doc-variants
+git clone -b <QUARTUS_REL_TAG> --recurse-submodules https://github.com/altera-fpga/agilex-ed-drive-on-chip.git doc-variants
 ```
 
 * Navigate to `doc-variants` directory and create your project in a location of your choice `\<project\>`
