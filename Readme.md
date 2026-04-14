@@ -12,13 +12,15 @@ designs.
 * **HPS_NIOSVg_DoC_dual_axis**: Drive-On-Chip Example Design with dual axis and Hard
   Processor System for higher-level motion control applications.
   See [HPS_NIOSVg_DoC_dual_axis](./HPS_NIOSVg_DoC_dual_axis) to create and build.
+  System Example Design using this hardware: [Drive-On-Chip with PLC Design Example for Agilex™ Devices](https://altera-fpga.github.io/latest/embedded-designs/agilex-5/e-series/modular-065b/drive-on-chip/doc-plc/)
 * **HPS_NIOSVg_DoC_3x2_axis**: Drive-On-Chip Example Design with 6 axis and Hard
   Processor System for higher-level motion control applications.
   See [HPS_NIOSVg_DoC_3x2_axis](./HPS_NIOSVg_DoC_3x2_axis) to create and build.
+  System Example Design using this hardware: [ROS Consolidated Robot Controller Example Design for Agilex™ 5 Devices](https://altera-fpga.github.io/latest/embedded-designs/agilex-5/e-series/modular-065b/drive-on-chip/doc-crc/)
 * **HPS_NIOSVg_DoC_Safety_dual_axis**: Drive-On-Chip Example Design with dual axis,
   Hard Processor System and safety blocks to showcase Altera FPGA Safety Concept.
-  See [HPS_NIOSVg_DoC_Safety_dual_axis](./HPS_NIOSVg_DoC_Safety_dual_axis)
-  to create and build.
+  See [HPS_NIOSVg_DoC_Safety_dual_axis](./HPS_NIOSVg_DoC_Safety_dual_axis) to create and build.
+  System Example Design using this hardware: [Drive-On-Chip with Functional Safety Design Example for Agilex™ 5 Devices](https://altera-fpga.github.io/latest/embedded-designs/agilex-5/e-series/modular-065b/drive-on-chip/doc-funct-safety/)
 
 ## Supporting Repositories
 

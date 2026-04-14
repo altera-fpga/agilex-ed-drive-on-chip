@@ -1,3 +1,3 @@
-# Altera® Core Layer
+# AlteraÂ® Core Layer
 
-This layer dynamically adds functionality, fixes and enhancements for core packages often included when building images targeting Altera® SoC FPGA devices.
+This layer dynamically adds functionality, fixes and enhancements for core packages often included when building images targeting AlteraÂ® SoC FPGA devices.

@@ -18,14 +18,14 @@ the **"YOCTO"** component compilation.
 
 The Modular Design Toolkit (MDT) requires the following software and versions (in Linux):
 
-* Altera® Quartus® Prime Pro version (25.1), including open-source tools to
+* Altera® Quartus® Prime Pro version (26.1), including open-source tools to
   compile software targeting NiosV soft-processors.
 * Device Support.
-* FPGA NiosV/g Open-Source Tools 25.1 (installed with Quartus® Prime).
+* FPGA NiosV/g Open-Source Tools 26.1 (installed with Quartus® Prime).
 
 Optional
 
-* DSP Builder for Altera® FPGAs Pro Edition v25.1.
+* DSP Builder for Altera® FPGAs Pro Edition v26.1.
 
 <br>
 
@@ -42,14 +42,14 @@ daughter cards and other components.
 ### Create this hardware design using the Modular Design Toolkit (MDT)
 
 Follow the next steps to create the Quartus® and Platform Designer Project for
-[Agilex™ 5 FPGA E-Series 065B Modular Development Kit](https://www.intel.com/content/www/us/en/products/details/fpga/development-kits/agilex/a5e065b-modular.html)
+[Agilex™ 5 FPGA E-Series 065B Modular Development Kit](https://www.altera.com/products/devkit/po-3001/agilex-5-fpga-and-soc-e-series-modular-development-kit-es)
 You can select any other available XML targeting other boards from the `HPS_NIOSVg_DoC_3x2_axis` directory.
 
 * Create your workspace and clone the repository using `--recurse-submodules`:
 
 ```bash
-cd <workspace> 
-git clone -b <BRANCH> --recurse-submodules https://github.com/altera-fpga/agilex-ed-drive-on-chip.git doc-variants
+cd <workspace>
+git clone -b <QUARTUS_REL_TAG> --recurse-submodules https://github.com/altera-fpga/agilex-ed-drive-on-chip.git doc-variants
 ```
 
 * Navigate to `doc-variants` directory and create your project in a location of your choice `\<project\>`
@@ -72,7 +72,7 @@ with the "Modular Design Toolkit" methodology.
   build the Quartus® project:
 
 ```bash
-cd <project>/scripts 
+cd <project>/scripts
 quartus_sh -t ./build_shell.tcl -hw_compile -sw_compile
 ```
 

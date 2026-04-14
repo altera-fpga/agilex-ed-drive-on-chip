@@ -1,4 +1,4 @@
-# Altera® Devkit Layer
+# AlteraÂ® Devkit Layer
 
-This layer contains machine metadata for Altera® SoC FPGA Devkits.
+This layer contains machine metadata for AlteraÂ® SoC FPGA Devkits.
 

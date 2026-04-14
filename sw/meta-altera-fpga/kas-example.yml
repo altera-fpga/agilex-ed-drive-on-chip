@@ -19,5 +19,6 @@ repos:
       meta-altera-vendor:
 local_conf_header:
   example_project: |
-    PREFERRED_PROVIDER_virtual/kernel = "linux-socfpga-rt"
+    IMAGE_INSTALL:append = " expand-root-partition"
+    SOCFPGA_FEATURES += "rt"
 
