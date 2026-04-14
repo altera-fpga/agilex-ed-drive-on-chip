@@ -1,6 +1,6 @@
 <!--
 ###################################################################################
-# Copyright (C) 2025 Altera Corporation
+# Copyright (C) Altera Corporation
 #
 # This software and the related documents are Altera copyrighted materials, and
 # your use of them is governed by the express license under which they were
@@ -16,7 +16,7 @@
   <DEVKIT>AGX_3C_Devkit</DEVKIT>
   <FAMILY>Agilex 3</FAMILY>
   <DEVICE>A3CW135BM16AE6S</DEVICE>
-  <VERSION>25.1.1</VERSION>
+  <VERSION>26.1</VERSION>
   <SUBSYSTEM type="clock" name="clock_subsystem">
     <DISABLE_DEFAULT_BOARD_CLKRST_EXPORT_TAG>1</DISABLE_DEFAULT_BOARD_CLKRST_EXPORT_TAG>
     <NUM_GEN_CLOCKS>4</NUM_GEN_CLOCKS>

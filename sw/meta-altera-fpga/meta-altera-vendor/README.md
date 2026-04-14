@@ -1,4 +1,4 @@
-# Altera® Vendor Layer
+# AlteraÂ® Vendor Layer
 
-This layer contains machine metadata for 3rd party vendor boards based on Altera® SoC FPGA platforms.
+This layer contains machine metadata for 3rd party vendor boards based on AlteraÂ® SoC FPGA platforms.
 
