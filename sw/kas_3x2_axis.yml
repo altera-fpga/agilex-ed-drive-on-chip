@@ -20,10 +20,9 @@ repos:
       meta-altera-devkit:
 local_conf_header:
   meta-driveonchip: |
-    PREFERRED_PROVIDER_virtual/kernel = "linux-socfpga-rt"
+    PREFERRED_PROVIDER_virtual/kernel = "linux-socfpga"
     IMAGE_BOOT_ARGS:append = " uio_pdrv_genirq.of_id=generic-uio"
     DT_SRC_URI:agilex5_mk_a5e065bb32aes1 ?= "file://agilex5_3x2_axis.dtsi"
     IMAGE_ROOTFS_EXTRA_SPACE = "5242880"
     FPGA_BST_SRC_URI = "file://top.core.rbf"
-    SOCFPGA_FEATURES:append = " bitstream uio rt"
-
+    SOCFPGA_FEATURES:append = " bitstream uio"

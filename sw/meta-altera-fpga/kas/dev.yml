@@ -3,15 +3,16 @@ header:
 repos:
   meta-oe:
     url: "https://git.openembedded.org/meta-openembedded"
-    commit: 205638f9edf8e1aa1fbcf28555625fe56f2701a5
+    commit: 4d3e2639dec542b58708244662d5ce36810fc510
     branch: scarthgap
     path: layers/meta-openembedded
     layers:
       meta-oe:
 local_conf_header:
   meta-altera-fpga-dev: |
-    EXTRA_IMAGE_FEATURES:append = " ssh-server-openssh"
+    EXTRA_IMAGE_FEATURES:append = " debug-tweaks ssh-server-openssh"
     IMAGE_INSTALL:append = " \
         packagegroup-fpga-embedded-tools \
         git \
+        htop \
     "

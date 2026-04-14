@@ -18,7 +18,7 @@ repos:
       meta-altera-devkit:
 local_conf_header:
   meta-driveonchip: |
-    PREFERRED_PROVIDER_virtual/kernel = "linux-socfpga-rt"
+    PREFERRED_PROVIDER_virtual/kernel = "linux-socfpga"
     IMAGE_INSTALL:append = " \
         hpssafechannel \
         kernel-module-gpio-altera \
@@ -28,5 +28,3 @@ local_conf_header:
     DT_SRC_URI:agilex5_mk_a5e065bb32aes1 ?= "file://agilex5_safety_dual_axis.dtsi"
     FPGA_BST_SRC_URI = "file://top.core.rbf"
     SOCFPGA_FEATURES:append = " bitstream uio rt"
-  bbmask-disable-mbedtls: |
-    BBMASK += "meta-altera-fpga/meta-altera-core/recipes-connectivity/mbedtls/mbedtls_3.6%.bbappend"

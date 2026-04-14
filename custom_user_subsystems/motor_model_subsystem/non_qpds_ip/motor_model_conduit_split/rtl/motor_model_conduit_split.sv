@@ -1,5 +1,5 @@
 /* ##################################################################################
- * Copyright (C) 2025 Altera Corporation
+ * Copyright (C) Altera Corporation
  *
  * This software and the related documents are Altera copyrighted materials, and
  * your use of them is governed by the express license under which they were

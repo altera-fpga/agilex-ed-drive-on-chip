@@ -26,7 +26,6 @@ SRC_URI:append = "${@bb.utils.contains('SOCFPGA_FEATURES', 'rt', ' file://rt.scc
 
 require recipes-kernel/linux/linux-yocto.inc
 
-KBUILD_DEFCONFIG ?= "socfpga_defconfig"
 KCONFIG_MODE ?= "--alldefconfig"
 
 INSANE_SKIP:${PN}-src = "buildpaths"

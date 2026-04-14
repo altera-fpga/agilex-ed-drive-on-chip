@@ -10,8 +10,8 @@ local_conf_header:
     VIRTUAL-RUNTIME_dev_manager = "udev"
     VIRTUAL-RUNTIME_init_manager = "systemd"
     DISTRO_FEATURES:append = " systemd usrmerge"
-    EXTRA_IMAGE_FEATURES = "stateless-rootfs debug-tweaks"
-    IMAGE_INSTALL:append = " kernel-modules"
+    EXTRA_IMAGE_FEATURES = "stateless-rootfs"
+    IMAGE_INSTALL:append = " kernel-modules tzdata"
     BB_DISKMON_DIRS = "\
         STOPTASKS,${TMPDIR},1G,100K \
         STOPTASKS,${DL_DIR},1G,100K \
