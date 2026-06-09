@@ -4,7 +4,7 @@ header:
     - repo: meta-altera-fpga
       file: kas/base.yml
     - repo: meta-altera-fpga
-      file: kas/poky.yml
+      file: kas/oe-core.yml
     - repo: meta-altera-fpga
       file: kas/dev.yml
 repos:
@@ -25,6 +25,6 @@ local_conf_header:
         htop \
         util-linux"
     IMAGE_BOOT_ARGS:append = " nohz_full=2,3 isolcpus=2,3 uio_pdrv_genirq.of_id=generic-uio"
-    DT_SRC_URI:agilex5_mk_a5e065bb32aes1 ?= "file://agilex5_safety_dual_axis.dtsi"
+    DT_SRC_URI:agilex5_mk_a5e065bb32aea ?= "file://agilex5_safety_dual_axis.dtsi"
     FPGA_BST_SRC_URI = "file://top.core.rbf"
     SOCFPGA_FEATURES:append = " bitstream uio rt"

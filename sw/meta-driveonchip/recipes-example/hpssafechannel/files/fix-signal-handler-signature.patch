@@ -1,0 +1,25 @@
+From: Drive on Chip <doc@altera.com>
+Subject: [PATCH] Fix signal handler signature for GCC 15
+Upstream-Status: Inappropriate [Altera example design]
+
+signal() requires a handler of type void (*)(int). Update handlerStop
+to accept the signal number.
+
+---
+ hps_safe_channel.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/hps_safe_channel.c b/hps_safe_channel.c
+--- a/hps_safe_channel.c
++++ b/hps_safe_channel.c
+@@ -108,8 +108,9 @@
+  * Signals the threads to stop and clean pointers
+  * this is triggered every ctrl+c
+  */
+-static void handlerStop()
++static void handlerStop(int sig)
+ {
++    (void)sig;
+     printf("received ctrl-c\n");
+     *signalTerm = true;
+     printf("Value terminal %d\n", *signalTerm);
